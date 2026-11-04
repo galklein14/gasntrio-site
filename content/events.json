@@ -1,0 +1,37 @@
+{
+  "hero_image": "/images/events.jpg",
+  "title_en": "Klezmer band for your wedding",
+  "title_he": "להקת כליזמר לחתונה",
+  "intro_en": "Right after the glass breaks (and before), we start the celebration, and every hug and kiss gets colored and blessed with a happy melody.",
+  "intro_he": "מיד לאחר שהכוס תישבר (וגם לפני) אנחנו נתחיל בחגיגה, וכל חיבוק ונשיקה ייצבעו וייתברכו במנגינה שמחה.",
+  "paragraphs_en": [
+    "Di Gasn Trio is a four-piece band: clarinet, accordion, double bass and percussion. We color the whole event with our very wide repertoire. In two words: happy music.",
+    "We'll simply be there and color the moment with an authentic experience of live musicians. Klezmorim, no less.",
+    "We have plenty of stage experience in Israel (local festivals, club shows, Idan Raichel's Live Park and more) and abroad (the National Centre for the Performing Arts in China, klezmer festivals in Europe, the international EXPO).",
+    "We play joyful music from Eastern Europe (Balkan, Gypsy, Bulgarian, klezmer), Middle Eastern music, Israeli songs, and traditional repertoire for events that are more or less religious."
+  ],
+  "paragraphs_he": [
+    "די גאסן טריו הוא הרכב של ארבעה נגנים: קלרינט, אקורדיון, קונטרבס וכלי הקשה. אנחנו צובעים את כל האירוע ברפרטואר הרחב מאוד שלנו. בשתי מילים: מוזיקה שמחה.",
+    "אנחנו פשוט נהיה שם ונצבע את הרגע הזה בחוויה אותנטית של מוזיקאים, נגנים, לא עלינו כליזמרים, חיים.",
+    "צברנו ניסיון רב במופעי במה בארץ (פסטיבלים מקומיים ומופעי מועדון, ׳עידן רייכל Live Park׳ ועוד) ובזירה הבינלאומית (התיאטרון הלאומי בסין, פסטיבלי כליזמר באירופה, תערוכת EXPO הבינלאומית).",
+    "בפירוט רחב יותר, אנחנו מנגנים מוזיקה מאושרת ממזרח אירופה (בלקני, צועני, בולגרי, כליזמר), מוזיקה מזרח תיכונית, שירי ארץ ישראל, וכן רפרטואר מסורתי (לאירועים דתיים יותר או פחות)."
+  ],
+  "question_en": "Missing the sounds of Grandma's house? Love Balkan and Gypsy music? Looking for a show tailored to your event?",
+  "question_he": "מתגעגעים לבית אמא או סבא? אוהבים מוזיקה בלקנית וצוענית? מחפשים מופע המותאם במיוחד לאירוע שלכם?",
+  "services": [
+    { "en": "Reception", "he": "קבלת פנים", "text_en": "Klezmer and Balkan tunes while your guests arrive.", "text_he": "מנגינות כליזמר ובלקן בזמן שהאורחים מגיעים.", "image": "/images/vineyard.jpg" },
+    { "en": "Chuppah", "he": "חופה", "text_en": "Traditional and original melodies for the ceremony, and a burst of joy when the glass breaks.", "text_he": "מנגינות מסורתיות ומקוריות לטקס, ופרץ של שמחה כשהכוס נשברת.", "image": "/images/alley.jpg" },
+    { "en": "Procession", "he": "תהלוכה", "text_en": "A street band on the move, leading the couple and the guests.", "text_he": "להקת רחוב בתנועה שמובילה את הזוג ואת האורחים.", "image": "/images/procession.jpg" },
+    { "en": "Dancing", "he": "ריקודים", "text_en": "Freylekhs, horas and Balkan dances that get every generation up.", "text_he": "פריילעכס, הורות וריקודי בלקן שמקימים כל דור לרחבה.", "image": "/images/dance.jpg" }
+  ],
+  "videos": [
+    "https://www.youtube.com/watch?v=YxjId-9_1JA",
+    "https://www.youtube.com/watch?v=jnVZLeuzu1o"
+  ],
+  "testimonials": [
+    { "text": "You guys were AMAZING! You totally made the atmosphere at the chuppah and the dancing. You made it really special and beautiful, and also fun. We can't tell you how happy we are that you played at our wedding!", "by": "Deborah & Omer", "lang": "en" },
+    { "text": "The music was so beautiful and every time we watch the video of the wedding we want to dance along with it! Your choices of songs and the quality of musicianship were outstanding in every way.", "by": "Sheila Waxman", "lang": "en" },
+    { "text": "למי שמחפש סאונד ייחודי, אנרגטי, עם הרכב שיכול להקפיץ ולהרקיד את האורחים, זה ההרכב! די גאסן, הרכב של וירטואוזים שעושים שמח על הלב של כל האורחים. גם הסבא בן ה-90 וגם האורחים הצעירים ציינו שוב ושוב את איכות המוזיקה, את הכיף שהכנסתם ואת האווירה שיצרתם!", "by": "בועז דורות", "lang": "he" },
+    { "text": "חיפשנו לחלק הראשון של החתונה מוזיקה שמחה בסגנון בלקני-כליזמר, כדי לשבור את מסורת שיר הכניסה הרומנטי ושפשוט יהיה שמח! הם היו מדהימים ועשו שמח לנו ולכל האורחים. מאוד מאוד מומלץ למי שרוצה אווירה של חגיגה שמחה.", "by": "שרון ודור ברדשבסקי", "lang": "he" }
+  ]
+}

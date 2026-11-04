@@ -1,0 +1,42 @@
+[
+  {
+    "name_en": "Gal Klein",
+    "name_he": "גל קליין",
+    "role_en": "Clarinet & vocals",
+    "role_he": "קלרינט ושירה",
+    "image": "/images/gal.jpg",
+    "bio_en": "Classically trained Israeli musician, fluent in klezmer and Balkan music. A graduate of the Jazz and Improvisation program at the Jerusalem Academy of Music. Gal is active in the klezmer and Yiddish world: he speaks the language of the Eastern European Jews who played this music, and preserves and renews this old culture around the globe. Founder of the hardcore klezmer band Ramzailech and co-founder of Di Gasn Trio.",
+    "bio_he": "מוזיקאי ישראלי בעל הכשרה קלאסית, שולט במוזיקת כליזמר ובלקן. בוגר מסלול ג׳אז ואלתור באקדמיה למוזיקה בירושלים. גל פעיל בעולם הכליזמר והיידיש: הוא מדבר את השפה של יהודי מזרח אירופה שניגנו את המוזיקה הזו, ומשמר ומחדש את התרבות הישנה ברחבי העולם. מייסד להקת ההארדקור-כליזמר רמזיילך ושותף להקמת די גאסן טריו.",
+    "website": "https://galklein.com"
+  },
+  {
+    "name_en": "Yanush Hurwitz",
+    "name_he": "ינוש הורויץ",
+    "role_en": "Accordion",
+    "role_he": "אקורדיון",
+    "image": "/images/yanush.jpg",
+    "bio_en": "Co-founder of Di Gasn Trio and a versatile, multi-disciplinary musician. He holds a BA in music from the Jerusalem Academy of Music and Dance. His repertoire spans classical, world and traditional music, with a main focus on Balkan and Eastern European music. Yanush performs and records regularly with different ensembles and as a soloist.",
+    "bio_he": "שותף להקמת די גאסן טריו, מוזיקאי רב-תחומי ורב-גוני. בעל תואר ראשון במוזיקה מהאקדמיה למוזיקה ולמחול בירושלים. הרפרטואר שלו כולל מוזיקה קלאסית, מוזיקת עולם ומוזיקה מסורתית, ובמרכזו מוזיקת הבלקן ומזרח אירופה. ינוש מופיע ומקליט באופן קבוע עם הרכבים שונים וגם כסולן.",
+    "website": ""
+  },
+  {
+    "name_en": "Asaf Rabi",
+    "name_he": "אסף רבי",
+    "role_en": "Double bass",
+    "role_he": "קונטרבס",
+    "image": "/images/asaf.jpg",
+    "bio_en": "Composer, bassist and music teacher. Plays with the Jerusalem Orchestra East & West. A graduate of the Amsterdam Conservatory of Music, he has played with Amir Benayoun, David Broza and Nasreen Qadri.",
+    "bio_he": "מלחין, בסיסט ומורה למוזיקה. מנגן בתזמורת ירושלים מזרח ומערב. בוגר הקונסרבטוריון של אמסטרדם, ניגן עם עמיר בניון, דוד ברוזה ונסרין קדרי.",
+    "website": ""
+  },
+  {
+    "name_en": "Ori Naveh",
+    "name_he": "אורי נווה",
+    "role_en": "Drums & percussion",
+    "role_he": "תופים וכלי הקשה",
+    "image": "/images/ori.jpg",
+    "bio_en": "Drummer and percussionist in a wide range of bands and ensembles. Ori also leads music and rhythm workshops, teaches music and produces musical shows for children and youth. He studied at the Rimon School of Music and at the Escola Didá samba school in Salvador, Brazil, and plays with Uldum (Brazil), Tipex (Israel), Kobi Aflalo, Hanan Yovel and many more.",
+    "bio_he": "מתופף ונגן כלי הקשה במגוון רחב של להקות והרכבים. אורי גם מנחה סדנאות מוזיקה וקצב, מלמד מוזיקה ומפיק מופעים מוזיקליים לילדים ולנוער. למד בבית הספר רימון ובבית הספר לסמבה Escola Didá בסלבדור שבברזיל, ומנגן עם Uldum (ברזיל), טיפקס, קובי אפללו, חנן יובל ועוד רבים.",
+    "website": ""
+  }
+]

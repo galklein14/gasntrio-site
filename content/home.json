@@ -1,0 +1,31 @@
+{
+  "hero_image": "/images/hero.jpg",
+  "kicker_en": "Klezmer · Balkan · World music",
+  "kicker_he": "כליזמר · בלקן · מוזיקת עולם",
+  "tagline_en": "Influenced by Klezmer and Balkan music, we share the joy and sadness of our music through traditional and original melodies. In this way, we try to preserve and renew this vibrant culture of ours.",
+  "tagline_he": "בהשראת מוזיקת כליזמר ובלקן, אנחנו חולקים את השמחה והעצב של המוזיקה שלנו במנגינות מסורתיות ומקוריות. כך אנחנו מנסים לשמר ולחדש את התרבות התוססת הזו שלנו.",
+  "about_title_en": "Rooted in tradition, driven by today",
+  "about_title_he": "שורשים במסורת, לב בהווה",
+  "about_en": [
+    "Di Gasn Trio is one of the leading voices of the new generation of klezmer music, blending the emotional depth of Jewish musical tradition with the fire and virtuosity of the Balkans.",
+    "Founded in Jerusalem in 2012 by accordionist Yanush Hurwitz and clarinetist-vocalist Gal Klein, the ensemble creates original music rooted in centuries-old traditions while speaking a distinctly contemporary musical language. Their concerts move naturally from intimate, heartfelt melodies to irresistible dance tunes, inviting audiences across cultures to become part of the celebration.",
+    "The ensemble has represented Israel and the Israeli Ministry of Foreign Affairs at major festivals and concert halls across Europe and Asia, including the National Centre for the Performing Arts in Beijing, Expo Astana (Kazakhstan), the International Klezmer Festival Fürth (Germany), and the first Klezmer Festival of Kazakhstan.",
+    "Di Gasn Trio has released three albums, is currently working on a fourth, and reaches a growing international audience with more than 7,000 monthly listeners on Spotify."
+  ],
+  "about_he": [
+    "די גאסן טריו הוא אחד הקולות הבולטים בדור החדש של מוזיקת הכליזמר, שמשלב את העומק הרגשי של המסורת המוזיקלית היהודית עם האש והווירטואוזיות של הבלקן.",
+    "ההרכב נוסד בירושלים ב-2012 על ידי האקורדיוניסט ינוש הורויץ והקלרינטן והזמר גל קליין. הוא יוצר מוזיקה מקורית שצומחת ממסורות בנות מאות שנים ומדברת בשפה מוזיקלית עכשווית לגמרי. ההופעות עוברות באופן טבעי ממנגינות אינטימיות ומרגשות לריקודים שאי אפשר לעמוד מולם, ומזמינות קהל מכל התרבויות להצטרף לחגיגה.",
+    "ההרכב ייצג את ישראל ואת משרד החוץ בפסטיבלים ובאולמות קונצרטים מרכזיים באירופה ובאסיה, ובהם המרכז הלאומי לאמנויות הבמה בבייג׳ינג, אקספו אסטנה בקזחסטן, הפסטיבל הבינלאומי לכליזמר בפיורט שבגרמניה ופסטיבל הכליזמר הראשון של קזחסטן.",
+    "די גאסן טריו הוציא שלושה אלבומים, עובד בימים אלה על הרביעי, ומגיע לקהל בינלאומי הולך וגדל של יותר מ-7,000 מאזינים חודשיים בספוטיפיי."
+  ],
+  "highlights": [
+    { "big": "2012", "en": "Founded in Jerusalem", "he": "נוסד בירושלים" },
+    { "big": "3", "en": "Albums & many singles", "he": "אלבומים ועוד סינגלים" },
+    { "big": "7,000+", "en": "Monthly Spotify listeners", "he": "מאזינים חודשיים בספוטיפיי" },
+    { "big": "9+", "en": "International festivals in Europe and Asia", "he": "פסטיבלים בינלאומיים באירופה ובאסיה" }
+  ],
+  "quote_en": "The perfect combination of musical excellence, warmth, and entertainment.",
+  "quote_he": "השילוב המושלם של מצוינות מוזיקלית, חום ובידור.",
+  "quote_by_en": "Prof. Arie Vardi",
+  "quote_by_he": "פרופ׳ אריה ורדי"
+}

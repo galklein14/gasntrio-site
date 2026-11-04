@@ -1,0 +1,30 @@
+{
+  "intro_en": "Dear promoter, here is everything you need to present Di Gasn Trio: biography, photos, technical rider and videos.",
+  "intro_he": "למפיקים ולעיתונאים: כאן תמצאו את כל מה שצריך כדי להציג את די גאסן טריו. ביוגרפיה, תמונות, מפרט טכני וסרטונים.",
+  "live_en": "From intimate storytelling to explosive dance-floor energy, Di Gasn Trio delivers a vibrant live experience where virtuosity, spontaneity and genuine human connection come together.",
+  "live_he": "מסיפור אינטימי ועד אנרגיה מתפוצצת על רחבת הריקודים, די גאסן טריו מביא חוויה חיה ותוססת שבה נפגשים וירטואוזיות, ספונטניות וחיבור אנושי אמיתי.",
+  "downloads": [
+    { "label_en": "Press kit 2026 (PDF)", "label_he": "ערכת עיתונות 2026 (PDF)", "url": "/files/di-gasn-trio-press-kit-2026.pdf" },
+    { "label_en": "Press photos", "label_he": "תמונות לעיתונות", "url": "https://drive.google.com/drive/u/2/folders/0B6C9xY-iPy-NbmF1TmhfU3RDeFU" },
+    { "label_en": "Tech rider + stage plot", "label_he": "מפרט טכני ותרשים במה", "url": "https://drive.google.com/file/d/1hpy7AlXuqQGA1C44QhU3CpgcYGsehjIJ/view?usp=sharing" },
+    { "label_en": "Live photos", "label_he": "תמונות מהופעות", "url": "https://drive.google.com/drive/u/2/folders/0B6C9xY-iPy-NSmYtRTVqUmFmS2M" }
+  ],
+  "festivals": [
+    { "en": "National Centre for the Performing Arts, Beijing", "he": "המרכז הלאומי לאמנויות הבמה, בייג׳ינג" },
+    { "en": "EXPO Kazakhstan", "he": "אקספו קזחסטן" },
+    { "en": "International Klezmer Festival Fürth, Germany", "he": "הפסטיבל הבינלאומי לכליזמר בפיורט, גרמניה" },
+    { "en": "First Klezmer Festival of Kazakhstan", "he": "פסטיבל הכליזמר הראשון של קזחסטן" },
+    { "en": "First Klezmer Festival of Hungary", "he": "פסטיבל הכליזמר הראשון של הונגריה" },
+    { "en": "Mediterranean Music Festival, Switzerland", "he": "פסטיבל המוזיקה הים-תיכונית, שווייץ" },
+    { "en": "Cosmopolis Kavala Festival, Greece", "he": "פסטיבל קוסמופוליס בקוואלה, יוון" },
+    { "en": "Israel Music Showcase Festival", "he": "פסטיבל הבמה הישראלית (Israel Music Showcase)" },
+    { "en": "Orit Wolf Concert Series", "he": "סדרת הקונצרטים של אורית וולף" }
+  ],
+  "experience": [
+    { "en": "Virtuosic musicianship", "he": "נגינה וירטואוזית" },
+    { "en": "Dance-driven energy", "he": "אנרגיה שמובילה לריקוד" },
+    { "en": "Original compositions", "he": "יצירות מקוריות" },
+    { "en": "Audience interaction", "he": "חיבור ואינטראקציה עם הקהל" }
+  ],
+  "photos": ["/images/live-1.jpg", "/images/live-2.jpg", "/images/live-3.jpg", "/images/hero.jpg"]
+}

@@ -1,0 +1,224 @@
+# Admin panel (Pages CMS) for gasntrio.com
+# Each entry below is one menu item in the admin panel.
+# Every text has a Hebrew field (עברית) and an English field (English).
+
+media:
+  input: images
+  output: /images
+  categories: [image]
+
+content:
+  # ---------- Shows ----------
+  - name: shows
+    label: "הופעות (נוסף על Bandsintown)"
+    type: file
+    path: content/shows.json
+    format: json
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{date} · {title_he}"
+    fields:
+      - { name: date, label: "תאריך", type: date, required: true, options: { format: yyyy-MM-dd } }
+      - { name: time, label: "שעה (למשל 20:30)", type: string }
+      - { name: title_he, label: "שם ההופעה · עברית", type: string, required: true }
+      - { name: title_en, label: "שם ההופעה · English", type: string }
+      - { name: place_he, label: "מקום ועיר · עברית", type: string }
+      - { name: place_en, label: "מקום ועיר · English", type: string }
+      - { name: tickets, label: "קישור לכרטיסים", type: string }
+
+  # ---------- Music ----------
+  - name: music
+    label: "מוזיקה וסרטונים"
+    type: file
+    path: content/music.json
+    format: json
+    fields:
+      - name: featured
+        label: "הסינגל המוצג"
+        type: object
+        fields:
+          - { name: kicker_he, label: "כותרת קטנה · עברית", type: string }
+          - { name: kicker_en, label: "כותרת קטנה · English", type: string }
+          - { name: title_he, label: "שם · עברית", type: string }
+          - { name: title_en, label: "שם · English", type: string }
+          - { name: text_he, label: "תיאור · עברית", type: text }
+          - { name: text_en, label: "תיאור · English", type: text }
+          - { name: image, label: "עטיפה", type: image }
+          - { name: link, label: "קישור להאזנה", type: string }
+      - name: videos
+        label: "סרטונים (הראשון מוצג בגדול)"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title_he}"
+        fields:
+          - { name: youtube, label: "קישור ליוטיוב", type: string, required: true }
+          - { name: title_he, label: "שם · עברית", type: string }
+          - { name: title_en, label: "שם · English", type: string }
+          - { name: caption_he, label: "כיתוב · עברית", type: string }
+          - { name: caption_en, label: "כיתוב · English", type: string }
+      - { name: spotify_albums, label: "אלבומים בספוטיפיי (קישור לאלבום או מזהה)", type: string, list: true }
+
+  # ---------- Home ----------
+  - name: home
+    label: "דף הבית"
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - { name: hero_image, label: "תמונה ראשית", type: image }
+      - { name: kicker_he, label: "שורה קטנה מעל השם · עברית", type: string }
+      - { name: kicker_en, label: "שורה קטנה מעל השם · English", type: string }
+      - { name: tagline_he, label: "משפט פתיחה · עברית", type: text }
+      - { name: tagline_en, label: "משפט פתיחה · English", type: text }
+      - { name: about_title_he, label: "כותרת 'עלינו' · עברית", type: string }
+      - { name: about_title_en, label: "כותרת 'עלינו' · English", type: string }
+      - { name: about_he, label: "פסקאות 'עלינו' · עברית", type: text, list: true }
+      - { name: about_en, label: "פסקאות 'עלינו' · English", type: text, list: true }
+      - name: highlights
+        label: "מספרים בולטים"
+        type: object
+        list: true
+        fields:
+          - { name: big, label: "מספר / מילה גדולה", type: string }
+          - { name: he, label: "טקסט · עברית", type: string }
+          - { name: en, label: "טקסט · English", type: string }
+      - { name: quote_he, label: "ציטוט · עברית", type: text }
+      - { name: quote_en, label: "ציטוט · English", type: text }
+      - { name: quote_by_he, label: "מי אמר · עברית", type: string }
+      - { name: quote_by_en, label: "מי אמר · English", type: string }
+
+  # ---------- Members ----------
+  - name: members
+    label: "חברי ההרכב"
+    type: file
+    path: content/members.json
+    format: json
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{name_he}"
+    fields:
+      - { name: name_he, label: "שם · עברית", type: string, required: true }
+      - { name: name_en, label: "שם · English", type: string }
+      - { name: role_he, label: "כלי · עברית", type: string }
+      - { name: role_en, label: "כלי · English", type: string }
+      - { name: image, label: "תמונה (ריבועית)", type: image }
+      - { name: bio_he, label: "ביוגרפיה · עברית", type: text }
+      - { name: bio_en, label: "ביוגרפיה · English", type: text }
+      - { name: website, label: "אתר אישי (לא חובה)", type: string }
+
+  # ---------- Weddings & events ----------
+  - name: events
+    label: "חתונות ואירועים"
+    type: file
+    path: content/events.json
+    format: json
+    fields:
+      - { name: hero_image, label: "תמונה ראשית", type: image }
+      - { name: title_he, label: "כותרת · עברית", type: string }
+      - { name: title_en, label: "כותרת · English", type: string }
+      - { name: intro_he, label: "פתיח · עברית", type: text }
+      - { name: intro_en, label: "פתיח · English", type: text }
+      - { name: question_he, label: "שאלה מעל השירותים · עברית", type: text }
+      - { name: question_en, label: "שאלה מעל השירותים · English", type: text }
+      - name: services
+        label: "חלקי האירוע (קבלת פנים, חופה...)"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{he}"
+        fields:
+          - { name: he, label: "שם · עברית", type: string }
+          - { name: en, label: "שם · English", type: string }
+          - { name: text_he, label: "תיאור · עברית", type: text }
+          - { name: text_en, label: "תיאור · English", type: text }
+          - { name: image, label: "תמונה", type: image }
+      - { name: paragraphs_he, label: "פסקאות · עברית", type: text, list: true }
+      - { name: paragraphs_en, label: "פסקאות · English", type: text, list: true }
+      - { name: videos, label: "סרטונים מחתונות (קישורי יוטיוב)", type: string, list: true }
+      - name: testimonials
+        label: "המלצות"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{by}"
+        fields:
+          - { name: text, label: "ההמלצה (בשפה המקורית)", type: text }
+          - { name: by, label: "מי כתב", type: string }
+          - name: lang
+            label: "שפת ההמלצה"
+            type: select
+            options:
+              values: ["he", "en"]
+
+  # ---------- Press kit ----------
+  - name: press
+    label: "ערכת עיתונות (EPK)"
+    type: file
+    path: content/press.json
+    format: json
+    fields:
+      - { name: intro_he, label: "פתיח · עברית", type: text }
+      - { name: intro_en, label: "פתיח · English", type: text }
+      - { name: live_he, label: "החוויה החיה · עברית", type: text }
+      - { name: live_en, label: "החוויה החיה · English", type: text }
+      - name: downloads
+        label: "קבצים להורדה"
+        type: object
+        list: true
+        fields:
+          - { name: label_he, label: "טקסט הכפתור · עברית", type: string }
+          - { name: label_en, label: "טקסט הכפתור · English", type: string }
+          - { name: url, label: "קישור", type: string }
+      - name: festivals
+        label: "פסטיבלים ובמות"
+        type: object
+        list: true
+        fields:
+          - { name: he, label: "עברית", type: string }
+          - { name: en, label: "English", type: string }
+      - name: experience
+        label: "מה הקהל מקבל"
+        type: object
+        list: true
+        fields:
+          - { name: he, label: "עברית", type: string }
+          - { name: en, label: "English", type: string }
+      - { name: photos, label: "תמונות", type: image, list: true }
+
+  # ---------- General ----------
+  - name: general
+    label: "הגדרות כלליות ויצירת קשר"
+    type: file
+    path: content/general.json
+    format: json
+    fields:
+      - { name: email, label: "אימייל", type: string }
+      - name: phones
+        label: "טלפונים"
+        type: object
+        list: true
+        fields:
+          - { name: number, label: "מספר", type: string }
+          - { name: name_he, label: "שם · עברית", type: string }
+          - { name: name_en, label: "שם · English", type: string }
+      - { name: whatsapp, label: "וואטסאפ (מספר עם קידומת, בלי +)", type: string }
+      - { name: web3forms_key, label: "מפתח Web3Forms (ריק = בלי טופס, רק פרטי קשר)", type: string }
+      - name: bandsintown
+        label: "Bandsintown"
+        type: object
+        fields:
+          - { name: artist_id, label: "מספר אמן", type: string }
+          - { name: url, label: "קישור לעמוד", type: string }
+      - name: social
+        label: "רשתות חברתיות"
+        type: object
+        list: true
+        fields:
+          - { name: label, label: "שם", type: string }
+          - { name: url, label: "כתובת", type: string }
