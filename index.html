@@ -27,10 +27,11 @@
     <a class="logo" href="/"><img src="/images/logo-cream.png" alt="Di Gasn Trio · די גאסן טריו" width="160" height="50"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">תפריט</button>
     <nav id="nav" aria-label="Main">
-      <a href="#about">עלינו</a>
-      <a href="#shows">הופעות</a>
-      <a href="#music">מוזיקה</a>
-      <a href="/events/">חתונות ואירועים</a>
+      <a href="/about/">עלינו</a>
+      <a href="/concerts/">הופעות</a>
+      <a href="/music/">מוזיקה</a>
+      <a href="/di-gasn-events/">אירועים</a>
+      <a href="/lpwedding/">חתונות</a>
       <a href="/epk/">ערכת עיתונות</a>
       <a class="lang" href="/en/" hreflang="en" lang="en">English</a>
       <a class="btn small" href="#contact">הזמינו אותנו</a>
@@ -45,38 +46,21 @@
     <p class="kicker" data-c="home.kicker"></p>
     <h1>די גאסן טריו<span class="sub" lang="en">Di Gasn Trio</span></h1>
     <p class="tag" data-c="home.tagline"></p>
-    <div class="ctas"><a class="btn" href="#contact">הזמינו את הלהקה</a><a class="btn ghost" href="#music">להאזנה</a><a class="btn ghost" href="/events/">לחתונות ואירועים</a></div>
+    <div class="ctas"><a class="btn" href="#contact">הזמינו את הלהקה</a><a class="btn ghost" href="/music/">להאזנה</a><a class="btn ghost" href="/lpwedding/">חתונות</a></div>
   </div>
 </section>
-
-<section id="shows">
+<section>
+  <div class="wrap">
+    <div class="featured" id="featured"></div>
+    <div id="videos" data-limit="2" class="pair"></div>
+    <p style="margin-top:28px"><a class="btn ink" href="/music/">עוד מוזיקה</a></p>
+  </div>
+</section>
+<section class="about">
   <div class="wrap">
     <div class="shows-head"><h2>הופעות קרובות</h2><img src="/images/collage-birds.webp" alt="" width="170" height="147" loading="lazy"></div>
-    <div id="shows-list"></div>
-    <div class="bit-box" id="bit-box"><h3>עוד תאריכים מ-Bandsintown</h3><div id="bit"></div></div>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="wrap">
-    <div class="about-grid">
-      <div><h2 data-c="home.about_title"></h2><div id="about-text"></div></div>
-      <div class="blob"><img src="/images/collage-hero.webp" alt="" width="452" height="502" loading="lazy"></div>
-    </div>
-    <ul class="highlights" id="highlights"></ul>
-    <blockquote class="quote"><span data-c="home.quote"></span><cite data-c="home.quote_by"></cite></blockquote>
-    <h2 style="margin-top:64px">ההרכב</h2>
-    <div id="members"></div>
-  </div>
-</section>
-
-<section id="music">
-  <div class="wrap">
-    <h2>להאזין ולצפות</h2>
-    <div class="featured" id="featured"></div>
-    <div id="videos"></div>
-    <h2 style="margin-top:64px">אלבומים</h2>
-    <div class="albums" id="albums"></div>
+    <div id="shows-list" data-limit="3" class="on-dark"></div>
+    <p style="margin-top:20px"><a class="btn" href="/concerts/">לכל ההופעות</a></p>
   </div>
 </section>
 
@@ -109,7 +93,7 @@
       <div><img src="/images/logo-cream.png" alt="Di Gasn Trio" width="172" height="54"><ul id="social"></ul></div>
       <div id="foot-contact"></div>
     </div>
-    <p class="fine">© <span id="year"></span> Di Gasn Trio · כל הזכויות שמורות<a href="/privacy/">מדיניות פרטיות</a></p>
+    <p class="fine">© <span id="year"></span> Di Gasn Trio · כל הזכויות שמורות<a href="/privacypolicy/">מדיניות פרטיות</a></p>
   </div>
 </footer>
 <script src="/app.js" defer></script>

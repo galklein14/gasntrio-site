@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>עלינו | די גאסן טריו</title>
+<meta name="description" content="די גאסן טריו: הסיפור של הלהקה והנגנים.">
+<link rel="canonical" href="https://gasntrio.com/about/">
+<link rel="alternate" hreflang="he" href="https://gasntrio.com/about/">
+<link rel="alternate" hreflang="en" href="https://gasntrio.com/en/about/">
+<link rel="alternate" hreflang="x-default" href="https://gasntrio.com/about/">
+<meta property="og:title" content="עלינו | די גאסן טריו">
+<meta property="og:description" content="די גאסן טריו: הסיפור של הלהקה והנגנים.">
+<meta property="og:image" content="https://gasntrio.com/images/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body data-page="about">
+<a class="skip" href="#main">דילוג לתוכן</a>
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a class="logo" href="/"><img src="/images/logo-cream.png" alt="Di Gasn Trio · די גאסן טריו" width="160" height="50"></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">תפריט</button>
+    <nav id="nav" aria-label="Main">
+      <a href="/about/" aria-current="page">עלינו</a>
+      <a href="/concerts/">הופעות</a>
+      <a href="/music/">מוזיקה</a>
+      <a href="/di-gasn-events/">אירועים</a>
+      <a href="/lpwedding/">חתונות</a>
+      <a href="/epk/">ערכת עיתונות</a>
+      <a class="lang" href="/en/about/" hreflang="en" lang="en">English</a>
+      <a class="btn small" href="#contact">הזמינו אותנו</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="about" style="padding-top:clamp(48px,7vw,80px)">
+  <div class="wrap">
+    <div class="about-grid">
+      <div><p class="kicker" style="color:var(--khaki)">עלינו</p><h1 class="page-title light" data-c="home.about_title"></h1><div id="about-text"></div></div>
+      <div class="blob"><img src="/images/collage-hero.webp" alt="" width="452" height="502"></div>
+    </div>
+    <ul class="highlights" id="highlights"></ul>
+    <blockquote class="quote"><span data-c="home.quote"></span><cite data-c="home.quote_by"></cite></blockquote>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <h2>ההרכב</h2>
+    <div id="members" data-full="1" class="full-bios"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>בואו נדבר</h2>
+      <p class="lead">הופעות, פסטיבלים, חתונות ואירועים פרטיים, בארץ ובחו״ל. ספרו לנו מה התאריך, איפה ומה חוגגים.</p>
+      <div class="direct" id="direct"></div>
+    </div>
+    <form id="form" action="https://api.web3forms.com/submit" method="POST" hidden>
+      <input type="hidden" name="access_key" id="form-key">
+      <input type="hidden" name="subject" value="gasntrio.com">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+      <label>שם<input name="name" required autocomplete="name"></label>
+      <label>אימייל<input name="email" type="email" required autocomplete="email"></label>
+      <label>טלפון<input name="phone" type="tel" autocomplete="tel"></label>
+      <label>תאריך האירוע<input name="event_date" type="date"></label>
+      <label class="full">סוג האירוע<select name="event_type"><option>הופעה / פסטיבל</option><option>חתונה</option><option>בר / בת מצווה</option><option>אירוע פרטי או של חברה</option><option>אחר</option></select></label>
+      <label class="full">הודעה<textarea name="message" required></textarea></label>
+      <div class="full"><button class="btn" type="submit">שליחה</button></div>
+      <p class="form-status full" id="form-status" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="/images/logo-cream.png" alt="Di Gasn Trio" width="172" height="54"><ul id="social"></ul></div>
+      <div id="foot-contact"></div>
+    </div>
+    <p class="fine">© <span id="year"></span> Di Gasn Trio · כל הזכויות שמורות<a href="/privacypolicy/">מדיניות פרטיות</a></p>
+  </div>
+</footer>
+<script src="/app.js" defer></script>
+</body>
+</html>

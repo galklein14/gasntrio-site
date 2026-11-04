@@ -27,11 +27,12 @@
     <a class="logo" href="/en/"><img src="/images/logo-cream.png" alt="Di Gasn Trio · די גאסן טריו" width="160" height="50"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Main">
-      <a href="#about">About</a>
-      <a href="#shows">Shows</a>
-      <a href="#music">Music</a>
-      <a href="/en/events/">Weddings & events</a>
-      <a href="/en/epk/">Press kit</a>
+      <a href="/en/about/">About</a>
+      <a href="/en/concerts/">Concerts</a>
+      <a href="/en/music/">Music</a>
+      <a href="/en/di-gasn-events/">Events</a>
+      <a href="/en/lpwedding/">Weddings</a>
+      <a href="/en/epk/">EPK</a>
       <a class="lang" href="/" hreflang="he" lang="he">עברית</a>
       <a class="btn small" href="#contact">Book us</a>
     </nav>
@@ -45,38 +46,21 @@
     <p class="kicker" data-c="home.kicker"></p>
     <h1>Di Gasn Trio<span class="sub" lang="he">די גאסן טריו</span></h1>
     <p class="tag" data-c="home.tagline"></p>
-    <div class="ctas"><a class="btn" href="#contact">Book the band</a><a class="btn ghost" href="#music">Listen</a><a class="btn ghost" href="/en/events/">Weddings & events</a></div>
+    <div class="ctas"><a class="btn" href="#contact">Book the band</a><a class="btn ghost" href="/en/music/">Listen</a><a class="btn ghost" href="/en/lpwedding/">Weddings</a></div>
   </div>
 </section>
-
-<section id="shows">
+<section>
+  <div class="wrap">
+    <div class="featured" id="featured"></div>
+    <div id="videos" data-limit="2" class="pair"></div>
+    <p style="margin-top:28px"><a class="btn ink" href="/en/music/">More music</a></p>
+  </div>
+</section>
+<section class="about">
   <div class="wrap">
     <div class="shows-head"><h2>Upcoming shows</h2><img src="/images/collage-birds.webp" alt="" width="170" height="147" loading="lazy"></div>
-    <div id="shows-list"></div>
-    <div class="bit-box" id="bit-box"><h3>More dates from Bandsintown</h3><div id="bit"></div></div>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="wrap">
-    <div class="about-grid">
-      <div><h2 data-c="home.about_title"></h2><div id="about-text"></div></div>
-      <div class="blob"><img src="/images/collage-hero.webp" alt="" width="452" height="502" loading="lazy"></div>
-    </div>
-    <ul class="highlights" id="highlights"></ul>
-    <blockquote class="quote"><span data-c="home.quote"></span><cite data-c="home.quote_by"></cite></blockquote>
-    <h2 style="margin-top:64px">The band</h2>
-    <div id="members"></div>
-  </div>
-</section>
-
-<section id="music">
-  <div class="wrap">
-    <h2>Listen & watch</h2>
-    <div class="featured" id="featured"></div>
-    <div id="videos"></div>
-    <h2 style="margin-top:64px">Albums</h2>
-    <div class="albums" id="albums"></div>
+    <div id="shows-list" data-limit="3" class="on-dark"></div>
+    <p style="margin-top:20px"><a class="btn" href="/en/concerts/">All concerts</a></p>
   </div>
 </section>
 
@@ -109,7 +93,7 @@
       <div><img src="/images/logo-cream.png" alt="Di Gasn Trio" width="172" height="54"><ul id="social"></ul></div>
       <div id="foot-contact"></div>
     </div>
-    <p class="fine">© <span id="year"></span> Di Gasn Trio · All rights reserved<a href="/en/privacy/">Privacy policy</a></p>
+    <p class="fine">© <span id="year"></span> Di Gasn Trio · All rights reserved<a href="/en/privacypolicy/">Privacy policy</a></p>
   </div>
 </footer>
 <script src="/app.js" defer></script>

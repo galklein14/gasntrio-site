@@ -10,21 +10,30 @@ import pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://gasntrio.com"
 
+# Same addresses as the original Wix site, so old links keep working.
 PAGES = {
-    "home":    {"he": "",          "en": "en/"},
-    "events":  {"he": "events/",   "en": "en/events/"},
-    "epk":     {"he": "epk/",      "en": "en/epk/"},
-    "privacy": {"he": "privacy/",  "en": "en/privacy/"},
+    "home":     {"he": "",                 "en": "en/"},
+    "about":    {"he": "about/",           "en": "en/about/"},
+    "concerts": {"he": "concerts/",        "en": "en/concerts/"},
+    "music":    {"he": "music/",           "en": "en/music/"},
+    "events":   {"he": "di-gasn-events/",  "en": "en/di-gasn-events/"},
+    "wedding":  {"he": "lpwedding/",       "en": "en/lpwedding/"},
+    "epk":      {"he": "epk/",             "en": "en/epk/"},
+    "privacy":  {"he": "privacypolicy/",   "en": "en/privacypolicy/"},
 }
 
 UI = {
     "skip": ("Skip to content", "דילוג לתוכן"),
     "menu": ("Menu", "תפריט"),
     "nav_about": ("About", "עלינו"),
-    "nav_shows": ("Shows", "הופעות"),
+    "nav_shows": ("Concerts", "הופעות"),
     "nav_music": ("Music", "מוזיקה"),
-    "nav_events": ("Weddings & events", "חתונות ואירועים"),
-    "nav_epk": ("Press kit", "ערכת עיתונות"),
+    "nav_events": ("Events", "אירועים"),
+    "nav_wedding": ("Weddings", "חתונות"),
+    "nav_epk": ("EPK", "ערכת עיתונות"),
+    "nav_home": ("Home", "בית"),
+    "more_shows": ("All concerts", "לכל ההופעות"),
+    "more_music": ("More music", "עוד מוזיקה"),
     "nav_book": ("Book us", "הזמינו אותנו"),
     "lang_other": ("עברית", "English"),
     "cta_book": ("Book the band", "הזמינו את הלהקה"),
@@ -34,6 +43,7 @@ UI = {
     "bit_title": ("More dates from Bandsintown", "עוד תאריכים מ-Bandsintown"),
     "band_title": ("The band", "ההרכב"),
     "music_title": ("Listen & watch", "להאזין ולצפות"),
+    "videos_title": ("Videos", "סרטונים"),
     "albums_title": ("Albums", "אלבומים"),
     "contact_title": ("Let's talk", "בואו נדבר"),
     "contact_text": ("Concerts, festivals, weddings and private events, in Israel and abroad. Tell us the date, the place and what you're celebrating.",
@@ -63,11 +73,19 @@ UI = {
 
 TITLES = {
     "home": ("Di Gasn Trio | Israeli Balkan-Klezmer Band", "די גאסן טריו | להקת בלקן-כליזמר ישראלית"),
+    "about": ("About | Di Gasn Trio", "עלינו | די גאסן טריו"),
+    "concerts": ("Concerts | Original Klezmer-Balkan band | Di Gasn Trio", "הופעות | להקת כליזמר-בלקן | די גאסן טריו"),
+    "music": ("Music | Original Klezmer-Balkan band | Di Gasn Trio", "מוזיקה | להקת כליזמר-בלקן | די גאסן טריו"),
+    "wedding": ("Klezmer band for your wedding | Di Gasn Trio", "להקת כליזמר לחתונה | די גאסן טריו"),
     "events": ("Klezmer band for weddings and events | Di Gasn Trio", "להקת כליזמר לחתונות ואירועים | די גאסן טריו"),
     "epk": ("Press kit | Di Gasn Trio", "ערכת עיתונות | די גאסן טריו"),
     "privacy": ("Privacy policy | Di Gasn Trio", "מדיניות פרטיות | די גאסן טריו"),
 }
 DESCS = {
+    "about": ("Di Gasn Trio: the story of the band and its musicians.", "די גאסן טריו: הסיפור של הלהקה והנגנים."),
+    "concerts": ("Upcoming concerts of Di Gasn Trio in Israel and abroad.", "ההופעות הקרובות של די גאסן טריו בארץ ובחו״ל."),
+    "music": ("Albums, singles and videos of Di Gasn Trio.", "אלבומים, סינגלים וסרטונים של די גאסן טריו."),
+    "wedding": ("A live klezmer and Balkan band for your wedding: reception, chuppah, procession and dancing.", "להקת כליזמר ובלקן חיה לחתונה שלכם: קבלת פנים, חופה, תהלוכה וריקודים."),
     "home": ("Di Gasn Trio: klezmer and Balkan music from Jerusalem. Concerts, festivals, weddings and events in Israel and abroad.",
              "די גאסן טריו: מוזיקת כליזמר ובלקן מירושלים. הופעות, פסטיבלים, חתונות ואירועים בארץ ובחו״ל."),
     "events": ("A live klezmer and Balkan band for your wedding: reception, chuppah, procession and dancing.",
@@ -106,7 +124,7 @@ def build(page, lang):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{TITLES[page][i]}</title>
 <meta name="description" content="{DESCS[page][i]}">
-<link rel="canonical" href="{SITE}{self_url}">
+<link rel="canonical" href="{SITE}{'/' + PAGES['events'][lang] if page == 'wedding' else self_url}">
 <link rel="alternate" hreflang="he" href="{SITE}/{PAGES[page]['he']}">
 <link rel="alternate" hreflang="en" href="{SITE}/{PAGES[page]['en']}">
 <link rel="alternate" hreflang="x-default" href="{SITE}/{PAGES[page]['he']}">
@@ -121,17 +139,18 @@ def build(page, lang):
 <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
-<body data-page="{page}">
+<body data-page="{page}"{' class="landing"' if page == "wedding" else ""}>
 <a class="skip" href="#main">{t('skip')}</a>
 <header class="bar">
   <div class="wrap bar-inner">
     <a class="logo" href="{home}"><img src="/images/logo-cream.png" alt="Di Gasn Trio · די גאסן טריו" width="160" height="50"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">{t('menu')}</button>
     <nav id="nav" aria-label="Main">
-      <a href="{sec('about')}">{t('nav_about')}</a>
-      <a href="{sec('shows')}">{t('nav_shows')}</a>
-      <a href="{sec('music')}">{t('nav_music')}</a>
-      <a href="{pre}events/"{cur('events')}>{t('nav_events')}</a>
+      <a href="{pre}about/"{cur('about')}>{t('nav_about')}</a>
+      <a href="{pre}concerts/"{cur('concerts')}>{t('nav_shows')}</a>
+      <a href="{pre}music/"{cur('music')}>{t('nav_music')}</a>
+      <a href="{pre}di-gasn-events/"{cur('events')}>{t('nav_events')}</a>
+      <a href="{pre}lpwedding/"{cur('wedding')}>{t('nav_wedding')}</a>
       <a href="{pre}epk/"{cur('epk')}>{t('nav_epk')}</a>
       <a class="lang" href="{other_url}" hreflang="{other}" lang="{other}">{t('lang_other')}</a>
       <a class="btn small" href="#contact">{t('nav_book')}</a>
@@ -172,7 +191,7 @@ def build(page, lang):
       <div><img src="/images/logo-cream.png" alt="Di Gasn Trio" width="172" height="54"><ul id="social"></ul></div>
       <div id="foot-contact"></div>
     </div>
-    <p class="fine">© <span id="year"></span> Di Gasn Trio · {t('rights')}<a href="{pre}privacy/">{t('privacy')}</a></p>
+    <p class="fine">© <span id="year"></span> Di Gasn Trio · {t('rights')}<a href="{pre}privacypolicy/">{t('privacy')}</a></p>
   </div>
 </footer>
 <script src="/app.js" defer></script>
@@ -188,42 +207,67 @@ def build(page, lang):
     <p class="kicker" data-c="home.kicker"></p>
     <h1>{'Di Gasn Trio' if lang == 'en' else 'די גאסן טריו'}<span class="sub" lang="{other}">{'די גאסן טריו' if lang == 'en' else 'Di Gasn Trio'}</span></h1>
     <p class="tag" data-c="home.tagline"></p>
-    <div class="ctas"><a class="btn" href="#contact">{t('cta_book')}</a><a class="btn ghost" href="#music">{t('cta_listen')}</a><a class="btn ghost" href="{pre}events/">{t('cta_events')}</a></div>
+    <div class="ctas"><a class="btn" href="#contact">{t('cta_book')}</a><a class="btn ghost" href="{pre}music/">{t('cta_listen')}</a><a class="btn ghost" href="{pre}lpwedding/">{t('nav_wedding')}</a></div>
   </div>
 </section>
-
-<section id="shows">
+<section>
+  <div class="wrap">
+    <div class="featured" id="featured"></div>
+    <div id="videos" data-limit="2" class="pair"></div>
+    <p style="margin-top:28px"><a class="btn ink" href="{pre}music/">{t('more_music')}</a></p>
+  </div>
+</section>
+<section class="about">
   <div class="wrap">
     <div class="shows-head"><h2>{t('shows_title')}</h2><img src="/images/collage-birds.webp" alt="" width="170" height="147" loading="lazy"></div>
+    <div id="shows-list" data-limit="3" class="on-dark"></div>
+    <p style="margin-top:20px"><a class="btn" href="{pre}concerts/">{t('more_shows')}</a></p>
+  </div>
+</section>
+"""
+    elif page == "about":
+        body = f"""
+<section class="about" style="padding-top:clamp(48px,7vw,80px)">
+  <div class="wrap">
+    <div class="about-grid">
+      <div><p class="kicker" style="color:var(--khaki)">{t('nav_about')}</p><h1 class="page-title light" data-c="home.about_title"></h1><div id="about-text"></div></div>
+      <div class="blob"><img src="/images/collage-hero.webp" alt="" width="452" height="502"></div>
+    </div>
+    <ul class="highlights" id="highlights"></ul>
+    <blockquote class="quote"><span data-c="home.quote"></span><cite data-c="home.quote_by"></cite></blockquote>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <h2>{t('band_title')}</h2>
+    <div id="members" data-full="1" class="full-bios"></div>
+  </div>
+</section>
+"""
+    elif page == "concerts":
+        body = f"""
+<section>
+  <div class="wrap">
+    <div class="shows-head"><h1 class="page-title">{t('shows_title')}</h1><img src="/images/collage-birds.webp" alt="" width="170" height="147"></div>
     <div id="shows-list"></div>
     <div class="bit-box" id="bit-box"><h3>{t('bit_title')}</h3><div id="bit"></div></div>
   </div>
 </section>
-
-<section class="about" id="about">
+"""
+    elif page == "music":
+        body = f"""
+<section>
   <div class="wrap">
-    <div class="about-grid">
-      <div><h2 data-c="home.about_title"></h2><div id="about-text"></div></div>
-      <div class="blob"><img src="/images/collage-hero.webp" alt="" width="452" height="502" loading="lazy"></div>
-    </div>
-    <ul class="highlights" id="highlights"></ul>
-    <blockquote class="quote"><span data-c="home.quote"></span><cite data-c="home.quote_by"></cite></blockquote>
-    <h2 style="margin-top:64px">{t('band_title')}</h2>
-    <div id="members"></div>
-  </div>
-</section>
-
-<section id="music">
-  <div class="wrap">
-    <h2>{t('music_title')}</h2>
+    <h1 class="page-title">{t('music_title')}</h1>
     <div class="featured" id="featured"></div>
-    <div id="videos"></div>
-    <h2 style="margin-top:64px">{t('albums_title')}</h2>
+    <h2>{t('albums_title')}</h2>
     <div class="albums" id="albums"></div>
+    <h2 style="margin-top:64px">{t('videos_title')}</h2>
+    <div id="videos"></div>
   </div>
 </section>
 """
-    elif page == "events":
+    elif page in ("events", "wedding"):
         body = f"""
 <section class="hero short">
   <img id="events-hero" src="/images/events.jpg" alt="" fetchpriority="high">
@@ -291,7 +335,7 @@ def build(page, lang):
         body = f"""
 <section style="padding-top:60px">
   <div class="wrap" style="max-width:780px">
-    <h1 style="font-size:2.6rem;color:var(--indigo)">{t('privacy')}</h1>
+    <h1 class="page-title">{t('privacy')}</h1>
     {PRIVACY[lang]}
   </div>
 </section>

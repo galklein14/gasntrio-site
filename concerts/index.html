@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>הופעות | להקת כליזמר-בלקן | די גאסן טריו</title>
+<meta name="description" content="ההופעות הקרובות של די גאסן טריו בארץ ובחו״ל.">
+<link rel="canonical" href="https://gasntrio.com/concerts/">
+<link rel="alternate" hreflang="he" href="https://gasntrio.com/concerts/">
+<link rel="alternate" hreflang="en" href="https://gasntrio.com/en/concerts/">
+<link rel="alternate" hreflang="x-default" href="https://gasntrio.com/concerts/">
+<meta property="og:title" content="הופעות | להקת כליזמר-בלקן | די גאסן טריו">
+<meta property="og:description" content="ההופעות הקרובות של די גאסן טריו בארץ ובחו״ל.">
+<meta property="og:image" content="https://gasntrio.com/images/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body data-page="concerts">
+<a class="skip" href="#main">דילוג לתוכן</a>
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a class="logo" href="/"><img src="/images/logo-cream.png" alt="Di Gasn Trio · די גאסן טריו" width="160" height="50"></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">תפריט</button>
+    <nav id="nav" aria-label="Main">
+      <a href="/about/">עלינו</a>
+      <a href="/concerts/" aria-current="page">הופעות</a>
+      <a href="/music/">מוזיקה</a>
+      <a href="/di-gasn-events/">אירועים</a>
+      <a href="/lpwedding/">חתונות</a>
+      <a href="/epk/">ערכת עיתונות</a>
+      <a class="lang" href="/en/concerts/" hreflang="en" lang="en">English</a>
+      <a class="btn small" href="#contact">הזמינו אותנו</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section>
+  <div class="wrap">
+    <div class="shows-head"><h1 class="page-title">הופעות קרובות</h1><img src="/images/collage-birds.webp" alt="" width="170" height="147"></div>
+    <div id="shows-list"></div>
+    <div class="bit-box" id="bit-box"><h3>עוד תאריכים מ-Bandsintown</h3><div id="bit"></div></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>בואו נדבר</h2>
+      <p class="lead">הופעות, פסטיבלים, חתונות ואירועים פרטיים, בארץ ובחו״ל. ספרו לנו מה התאריך, איפה ומה חוגגים.</p>
+      <div class="direct" id="direct"></div>
+    </div>
+    <form id="form" action="https://api.web3forms.com/submit" method="POST" hidden>
+      <input type="hidden" name="access_key" id="form-key">
+      <input type="hidden" name="subject" value="gasntrio.com">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+      <label>שם<input name="name" required autocomplete="name"></label>
+      <label>אימייל<input name="email" type="email" required autocomplete="email"></label>
+      <label>טלפון<input name="phone" type="tel" autocomplete="tel"></label>
+      <label>תאריך האירוע<input name="event_date" type="date"></label>
+      <label class="full">סוג האירוע<select name="event_type"><option>הופעה / פסטיבל</option><option>חתונה</option><option>בר / בת מצווה</option><option>אירוע פרטי או של חברה</option><option>אחר</option></select></label>
+      <label class="full">הודעה<textarea name="message" required></textarea></label>
+      <div class="full"><button class="btn" type="submit">שליחה</button></div>
+      <p class="form-status full" id="form-status" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="/images/logo-cream.png" alt="Di Gasn Trio" width="172" height="54"><ul id="social"></ul></div>
+      <div id="foot-contact"></div>
+    </div>
+    <p class="fine">© <span id="year"></span> Di Gasn Trio · כל הזכויות שמורות<a href="/privacypolicy/">מדיניות פרטיות</a></p>
+  </div>
+</footer>
+<script src="/app.js" defer></script>
+</body>
+</html>

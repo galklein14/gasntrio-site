@@ -71,19 +71,22 @@
 
   // Members
   const mb = $("#members");
+  const fullBio = mb?.dataset.full;
   if (mb) mb.replaceChildren(...members.map((m) => h("article", { class: "member" },
     h("img", { src: m.image, alt: L(m, "name"), loading: "lazy", width: 320, height: 320 }),
     h("div", { class: "member-body" },
       h("h3", { text: L(m, "name") }),
       h("p", { class: "role", text: L(m, "role") }),
-      L(m, "bio") ? h("details", {}, h("summary", { text: u("bio") }), h("p", { text: L(m, "bio") }), m.website ? h("p", {}, h("a", { href: m.website, target: "_blank", rel: "noopener", text: u("site") })) : null) : null,
+      fullBio ? h("p", { class: "bio", text: L(m, "bio") }) : null,
+      fullBio && m.website ? h("p", { style: "margin:6px 0 0" }, h("a", { href: m.website, target: "_blank", rel: "noopener", text: u("site") })) : null,
+      !fullBio && L(m, "bio") ? h("details", {}, h("summary", { text: u("bio") }), h("p", { text: L(m, "bio") }), m.website ? h("p", {}, h("a", { href: m.website, target: "_blank", rel: "noopener", text: u("site") })) : null) : null,
     ))));
 
   // Shows: hand-added list + Bandsintown widget
   const today = new Date().toISOString().slice(0, 10);
   const list = $("#shows-list");
   if (list) {
-    const up = (shows || []).filter((s) => s.date && s.date >= today).sort((a, b) => (a.date + (a.time || "")).localeCompare(b.date + (b.time || "")));
+    const up = (shows || []).filter((s) => s.date && s.date >= today).sort((a, b) => (a.date + (a.time || "")).localeCompare(b.date + (b.time || ""))).slice(0, Number(list.dataset.limit) || undefined);
     const loc = lang === "en" ? "en-GB" : "he-IL";
     list.replaceChildren(...(up.length ? up.map((s) => {
       const d = new Date(s.date + "T12:00:00");
@@ -129,7 +132,7 @@
     else fb.hidden = true;
   }
   const vids = $("#videos");
-  if (vids) vids.replaceChildren(...(music.videos || []).map(videoCard));
+  if (vids) vids.replaceChildren(...(music.videos || []).slice(0, Number(vids.dataset.limit) || undefined).map(videoCard));
   const al = $("#albums");
   if (al) al.replaceChildren(...(music.spotify_albums || []).map((id) =>
     h("iframe", { src: `https://open.spotify.com/embed/album/${String(id).split("album/").pop().split("?")[0]}?theme=0`, loading: "lazy", allow: "encrypted-media", title: "Spotify" })));

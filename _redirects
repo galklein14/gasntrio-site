@@ -1,7 +1,4 @@
-/about          /#about           301
-/concerts       /#shows           301
-/music          /#music           301
-/di-gasn-events /events/          301
-/lpwedding      /events/          301
-/privacypolicy  /privacy/         301
-/he             /                 301
+/events      /di-gasn-events/     301
+/en/events   /en/di-gasn-events/  301
+/wedding     /lpwedding/          301
+/privacy     /privacypolicy/      301
