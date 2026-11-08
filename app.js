@@ -156,7 +156,8 @@
     const card = h("article", { class: "service" },
       o.image ? h("img", { src: o.image, alt: "", loading: "lazy" }) : null,
       h("div", {}, h("h3", { text: o[lang] }), h("p", { text: L(o, "text") })));
-    return o.link ? h("a", { href: o.link, class: "card-link" }, card) : card;
+    const href = L(o, "link") || o.link;
+    return href ? h("a", { href, class: "card-link" }, card) : card;
   }));
 
   // Press & radio (shown only when there are items)

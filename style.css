@@ -180,9 +180,11 @@ footer { background: var(--ink); color: var(--paper); padding: 50px 0 30px; }
   .albums { grid-template-columns: 1fr; }
 }
 @media (max-width: 820px) {
-  .menu-btn { display: block; }
-  .bar nav { display: none; position: absolute; top: 100%; inset-inline: 0; background: var(--night); flex-direction: column; align-items: flex-start; padding: 12px clamp(16px, 4vw, 40px) 20px; gap: 14px; border-top: 1px solid #ffffff22; }
-  .bar nav.open { display: flex; }
+  /* Menu stays visible on phones: one scrollable row under the logo */
+  .bar-inner { flex-wrap: wrap; padding-bottom: 6px; }
+  .bar nav { width: 100%; overflow-x: auto; white-space: nowrap; gap: 18px; padding: 4px 0 6px; scrollbar-width: none; font-size: .98rem; }
+  .bar nav::-webkit-scrollbar { display: none; }
+  .bar nav > * { flex: none; }
   .about-grid, .two, .contact-grid, .featured { grid-template-columns: 1fr; }
   .featured img { max-width: 260px; }
   #testimonials, .gallery { grid-template-columns: 1fr; }
@@ -213,9 +215,6 @@ footer { background: var(--ink); color: var(--paper); padding: 50px 0 30px; }
 .full-bios { grid-template-columns: repeat(2, 1fr) !important; }
 .full-bios .member { flex-direction: row; border-radius: 16px; }
 .full-bios .member img { width: 42%; aspect-ratio: auto; height: auto; object-fit: cover; flex: none; }
-.landing .bar nav a:not(.btn):not(.lang) { display: none; }
-.landing .menu-btn { display: none !important; }
-.landing .bar nav { display: flex !important; position: static; flex-direction: row; background: none; padding: 0; border: 0; }
 @media (max-width: 820px) {
   #videos.pair { grid-template-columns: 1fr; }
   .full-bios { grid-template-columns: 1fr !important; }
@@ -253,3 +252,7 @@ footer { background: var(--ink); color: var(--paper); padding: 50px 0 30px; }
   .wedding-banner, .media-list, .insta-grid { grid-template-columns: 1fr; }
 }
 .about .empty { color: var(--paper); opacity: .85; }
+
+.offerings { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 1100px) { .offerings { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 820px) { .offerings { grid-template-columns: 1fr 1fr; } }

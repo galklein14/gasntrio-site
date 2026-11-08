@@ -135,7 +135,8 @@ content:
           - { name: text_he, label: "תיאור · עברית", type: text }
           - { name: text_en, label: "תיאור · English", type: text }
           - { name: image, label: "תמונה", type: image }
-          - { name: link, label: "קישור (לא חובה)", type: string }
+          - { name: link_he, label: "קישור מהגרסה העברית (לא חובה)", type: string }
+          - { name: link_en, label: "קישור מהגרסה האנגלית (לא חובה)", type: string }
       - { name: wedding_title_he, label: "כותרת החתונות · עברית", type: string }
       - { name: wedding_title_en, label: "כותרת החתונות · English", type: string }
       - { name: wedding_text_he, label: "טקסט החתונות · עברית", type: text }

@@ -6,36 +6,49 @@
   "intro_he": "מאולמות קונצרטים ופסטיבלים ועד חגים, אירועי קהילה ואירועים פרטיים: מוזיקת כליזמר ובלקן חיה, מותאמת לקהל שלכם.",
   "offerings": [
     {
-      "en": "Concerts & festivals",
-      "he": "הופעות ופסטיבלים",
-      "text_en": "A full concert program of original music and klezmer and Balkan classics, for stages, clubs and festivals in Israel and abroad.",
-      "text_he": "תוכנית הופעה מלאה של יצירות מקוריות וקלאסיקות כליזמר ובלקן, לבמות, מועדונים ופסטיבלים בארץ ובחו״ל.",
+      "he": "מופעי תוכן",
+      "en": "Themed concerts",
+      "text_he": "מופעים שבנויים סביב סיפור או נושא: שירי יידיש, מסע במוזיקה היהודית ממזרח אירופה לארץ ישראל, או מסע לבלקן. למרכזי תרבות, אולמות וסדרות קונצרטים.",
+      "text_en": "Concert programs built around a story or a theme: Yiddish song, a journey through Jewish music from Eastern Europe to Israel, or a trip to the Balkans. For cultural centers, halls and concert series.",
       "image": "/images/live-1.jpg",
-      "link": ""
+      "link_en": "",
+      "link_he": ""
     },
     {
-      "en": "Holidays & community events",
-      "he": "חגים ואירועי קהילה",
-      "text_en": "Hanukkah, Purim, Lag BaOmer, Jewish culture festivals and community celebrations, with a repertoire that fits the occasion.",
-      "text_he": "חנוכה, פורים, ל״ג בעומר, פסטיבלים לתרבות יהודית וחגיגות קהילתיות, עם רפרטואר שמתאים לאירוע.",
-      "image": "/images/procession.jpg",
-      "link": ""
-    },
-    {
-      "en": "Concert-lectures",
-      "he": "מופע-הרצאה",
-      "text_en": "Musical storytelling about Yiddish culture and the history of klezmer, for cultural centers, schools and communities.",
-      "text_he": "סיפור מוזיקלי על תרבות היידיש ועל ההיסטוריה של הכליזמר, למרכזי תרבות, בתי ספר וקהילות.",
+      "he": "כיתות אמן ומופעים למגמות מוזיקה",
+      "en": "Masterclasses & concerts for music programs",
+      "text_he": "כיתות אמן בסגנונות כליזמר ובלקן, בקישוטים ובאלתור, והופעות למגמות מוזיקה בתיכונים ולקונסרבטוריונים.",
+      "text_en": "Masterclasses in klezmer and Balkan styles, ornamentation and improvisation, and concerts for high-school music programs and conservatories.",
       "image": "/images/library.jpg",
-      "link": ""
+      "link_en": "",
+      "link_he": ""
     },
     {
-      "en": "Private & corporate events",
-      "he": "אירועים פרטיים ואירועי חברה",
-      "text_en": "Bar and bat mitzvahs, birthdays, company events and receptions: from background music to a full dance party.",
-      "text_he": "בר ובת מצווה, ימי הולדת, אירועי חברה וקבלות פנים: ממוזיקת רקע ועד מסיבת ריקודים.",
-      "image": "/images/events.jpg",
-      "link": ""
+      "he": "מופעי קבוצות חברים",
+      "en": "Concerts for groups of friends",
+      "text_he": "הופעה פרטית לקבוצה שלכם: יום הולדת, מפגש מחזור או חברים שרוצים ערב של כליזמר ובלקן חי, בבית או במקום אירוח.",
+      "text_en": "A private concert for your group: a birthday, a reunion, or friends who want an evening of live klezmer and Balkan music, at home or at a venue.",
+      "image": "/images/vineyard.jpg",
+      "link_en": "",
+      "link_he": ""
+    },
+    {
+      "he": "טקסי חיים ואירועים פרטיים",
+      "en": "Life-cycle ceremonies & private events",
+      "text_he": "חתונות, בר ובת מצווה, בריתות ושמחות משפחתיות: מוזיקה לטקס ולמסיבה.",
+      "text_en": "Weddings, bar and bat mitzvahs, brit celebrations and family events: music for the ceremony and for the party.",
+      "image": "/images/alley.jpg",
+      "link_en": "/wedding/",
+      "link_he": "/he/lpwedding/"
+    },
+    {
+      "he": "הרצאות",
+      "en": "Lectures",
+      "text_he": "הרצאות על כליזמר, על תרבות היידיש ועל ההיסטוריה של המוזיקה היהודית, עם דוגמאות מוזיקליות חיות.",
+      "text_en": "Talks on klezmer, Yiddish culture and the history of Jewish music, with live musical examples.",
+      "image": "/images/live-3.jpg",
+      "link_en": "",
+      "link_he": ""
     }
   ],
   "wedding_title_en": "Klezmer band for your wedding",

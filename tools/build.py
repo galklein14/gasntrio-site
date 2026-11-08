@@ -148,7 +148,7 @@ def build(page, lang):
 <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
-<body data-page="{page}"{' class="landing"' if page == "wedding" else ""}>
+<body data-page="{page}">
 <a class="skip" href="#main">{t('skip')}</a>
 <header class="bar">
   <div class="wrap bar-inner">
@@ -159,7 +159,6 @@ def build(page, lang):
       <a href="{link("concerts")}"{cur('concerts')}>{t('nav_shows')}</a>
       <a href="{link("music")}"{cur('music')}>{t('nav_music')}</a>
       <a href="{link("events")}"{cur('events')}>{t('nav_events')}</a>
-      <a href="{link("wedding")}"{cur('wedding')}>{t('nav_wedding')}</a>
       <a href="{link("epk")}"{cur('epk')}>{t('nav_epk')}</a>
       <a class="lang" href="{other_url}" hreflang="{other}" lang="{other}">{t('lang_other')}</a>
       <a class="btn small" href="#contact">{t('nav_book')}</a>
