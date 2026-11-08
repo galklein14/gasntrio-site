@@ -237,12 +237,6 @@ def build(page, lang):
     <p style="margin-top:20px"><a class="btn" href="{link("concerts")}">{t('more_shows')}</a></p>
   </div>
 </section>
-<section class="insta" id="insta">
-  <div class="wrap">
-    <div class="insta-head"><h2>{t('insta_title')}</h2><a class="btn ink" id="insta-link" href="https://www.instagram.com/balkan.klezmer.band/" target="_blank" rel="noopener">{t('insta_follow')} · @balkan.klezmer.band</a></div>
-    <div class="insta-embed" id="insta-embed"></div>
-  </div>
-</section>
 """
     elif page == "about":
         body = f"""
