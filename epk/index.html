@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=7277cacf">
+<link rel="stylesheet" href="/style.css?v=4f84e6b9">
 </head>
 <body data-page="epk">
 <a class="skip" href="#main">Skip to content</a>
@@ -45,27 +45,20 @@
     <p class="kicker">Electronic press kit</p>
     <h1 style="font-size:clamp(2.8rem,8vw,6rem)">Press kit</h1>
     <p class="tag" data-c="press.intro"></p>
-    <div class="downloads" id="downloads"></div>
   </div>
 </section>
-<section>
-  <div class="wrap two">
-    <div><h2>Biography</h2><div id="about-text"></div><blockquote class="quote" style="color:var(--indigo)"><span data-c="home.quote"></span><cite style="color:var(--coral)" data-c="home.quote_by"></cite></blockquote></div>
-    <div><h2>Live experience</h2><p class="lead" data-c="press.live"></p><ul class="pill-list" id="experience"></ul>
-      <h3 style="font-size:1.6rem;color:var(--indigo);margin:40px 0 10px">Selected festivals & venues</h3><ul class="festivals" id="festivals"></ul></div>
+<section class="epk">
+  <div class="wrap">
+    <p class="lead epk-hint">Open the sections you need.</p>
+    <details class="acc"><summary>Downloads: press kit, photos, tech rider</summary><div class="acc-body"><div class="downloads" id="downloads"></div></div></details>
+    <details class="acc"><summary>Biography</summary><div class="acc-body"><div id="about-text"></div><blockquote class="quote" style="color:var(--indigo)"><span data-c="home.quote"></span><cite style="color:var(--coral)" data-c="home.quote_by"></cite></blockquote></div></details>
+    <details class="acc"><summary>Live experience</summary><div class="acc-body"><p class="lead" data-c="press.live"></p><ul class="pill-list" id="experience"></ul></div></details>
+    <details class="acc"><summary>Selected festivals & venues</summary><div class="acc-body"><ul class="festivals" id="festivals"></ul></div></details>
+    <details class="acc"><summary>The band</summary><div class="acc-body"><div id="members"></div></div></details>
+    <details class="acc"><summary>Listen & watch</summary><div class="acc-body"><div id="videos"></div></div></details>
+    <details class="acc" id="press-sec"><summary>Press & radio</summary><div class="acc-body"><div class="media-list" id="media"></div></div></details>
+    <details class="acc"><summary>Photos</summary><div class="acc-body"><div class="gallery" id="photos"></div></div></details>
   </div>
-</section>
-<section class="about">
-  <div class="wrap"><h2>The band</h2><div id="members" style="margin-top:20px"></div></div>
-</section>
-<section>
-  <div class="wrap"><h2>Listen & watch</h2><div id="videos"></div></div>
-</section>
-<section class="press-sec" id="press-sec">
-  <div class="wrap"><h2>Press & radio</h2><div class="media-list" id="media"></div></div>
-</section>
-<section style="padding-top:0">
-  <div class="wrap"><h2>Photos</h2><div class="gallery" id="photos"></div></div>
 </section>
 
 <section class="contact" id="contact">
@@ -100,6 +93,6 @@
     <p class="fine">© <span id="year"></span> Di Gasn Trio · All rights reserved<a href="/privacypolicy/">Privacy policy</a></p>
   </div>
 </footer>
-<script src="/app.js?v=02ad32f8" defer></script>
+<script src="/app.js?v=53950fd7" defer></script>
 </body>
 </html>

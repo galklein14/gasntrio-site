@@ -10,15 +10,46 @@
     "link": "https://open.spotify.com/artist/5V0svTHulB2Yb5OUdr30if"
   },
   "spotify_albums": [
+    "0xGRKjzAO8AYSu34xm2pm3",
     "4xhAj7Hxe905lZb1P82xIn",
     "0x8ZznJzNoXgTwUcuhGusw",
     "7EsaNgh4vyozBQ3JgAZ9xk"
   ],
   "videos": [
-    { "youtube": "https://www.youtube.com/watch?v=9BAiEJzKuPk", "title_en": "Fun Berlin Tsu Lublin", "title_he": "פון בערלין צו לובלין", "caption_en": "From Berlin to Lublin, official clip", "caption_he": "מברלין ללובלין, קליפ רשמי" },
-    { "youtube": "https://www.youtube.com/watch?v=8xv_0acdTMc", "title_en": "Chompolon", "title_he": "צ׳ומפולון", "caption_en": "Rocking the streets of Tel Aviv", "caption_he": "מרעידים את רחובות תל אביב" },
-    { "youtube": "https://www.youtube.com/watch?v=Ulpfj08e1VU", "title_en": "Dilsko", "title_he": "דילסקו", "caption_en": "Live", "caption_he": "הופעה חיה" },
-    { "youtube": "https://www.youtube.com/watch?v=MYEKY734s0k", "title_en": "Mit Der Lerrer", "title_he": "מיט דער לערער", "caption_en": "Live", "caption_he": "הופעה חיה" },
-    { "youtube": "https://www.youtube.com/watch?v=rVBsaiGD53M", "title_en": "Our Story", "title_he": "הסיפור שלנו", "caption_en": "Di Gasn Trio, 2020", "caption_he": "די גאסן טריו, 2020" }
+    {
+      "youtube": "https://www.youtube.com/watch?v=9BAiEJzKuPk",
+      "title_en": "Fun Berlin Tsu Lublin",
+      "title_he": "פון בערלין צו לובלין",
+      "caption_en": "From Berlin to Lublin, official clip",
+      "caption_he": "מברלין ללובלין, קליפ רשמי"
+    },
+    {
+      "youtube": "https://www.youtube.com/watch?v=8xv_0acdTMc",
+      "title_en": "Chompolon",
+      "title_he": "צ׳ומפולון",
+      "caption_en": "Rocking the streets of Tel Aviv",
+      "caption_he": "מרעידים את רחובות תל אביב"
+    },
+    {
+      "youtube": "https://www.youtube.com/watch?v=Ulpfj08e1VU",
+      "title_en": "Dilsko",
+      "title_he": "דילסקו",
+      "caption_en": "Live",
+      "caption_he": "הופעה חיה"
+    },
+    {
+      "youtube": "https://www.youtube.com/watch?v=MYEKY734s0k",
+      "title_en": "Mit Der Lerrer",
+      "title_he": "מיט דער לערער",
+      "caption_en": "Live",
+      "caption_he": "הופעה חיה"
+    },
+    {
+      "youtube": "https://www.youtube.com/watch?v=rVBsaiGD53M",
+      "title_en": "Our Story",
+      "title_he": "הסיפור שלנו",
+      "caption_en": "Di Gasn Trio, 2020",
+      "caption_he": "די גאסן טריו, 2020"
+    }
   ]
 }

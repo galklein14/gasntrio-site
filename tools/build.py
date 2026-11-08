@@ -54,6 +54,8 @@ UI = {
     "wedding_more": ("Weddings: all the details", "לכל הפרטים על חתונות"),
     "watch_live": ("Watch us live", "ככה זה נראה על הבמה"),
     "press_title": ("Press & radio", "בתקשורת וברדיו"),
+    "downloads_title": ("Downloads: press kit, photos, tech rider", "להורדה: ערכת עיתונות, תמונות, מפרט טכני"),
+    "epk_hint": ("Open the sections you need.", "פתחו את החלקים שאתם צריכים."),
     "insta_title": ("On Instagram", "באינסטגרם"),
     "insta_follow": ("Follow us", "עקבו אחרינו"),
     "albums_title": ("Albums", "אלבומים"),
@@ -218,7 +220,7 @@ def build(page, lang):
     <p class="kicker" data-c="home.kicker"></p>
     <h1>{'Di Gasn Trio' if lang == 'en' else 'די גאסן טריו'}<span class="sub" lang="{other}">{'די גאסן טריו' if lang == 'en' else 'Di Gasn Trio'}</span></h1>
     <p class="tag" data-c="home.tagline"></p>
-    <div class="ctas"><a class="btn" href="#contact">{t('cta_book')}</a><a class="btn ghost" href="{link("music")}">{t('cta_listen')}</a><a class="btn ghost" href="{link("wedding")}">{t('nav_wedding')}</a></div>
+    <div class="ctas"><a class="btn" href="#contact">{t('cta_book')}</a><a class="btn ghost" href="{link("music")}">{t('cta_listen')}</a></div>
   </div>
 </section>
 <section>
@@ -238,7 +240,7 @@ def build(page, lang):
 <section class="insta" id="insta">
   <div class="wrap">
     <div class="insta-head"><h2>{t('insta_title')}</h2><a class="btn ink" id="insta-link" href="https://www.instagram.com/balkan.klezmer.band/" target="_blank" rel="noopener">{t('insta_follow')} · @balkan.klezmer.band</a></div>
-    <div class="insta-grid" id="insta-posts"></div>
+    <div class="insta-embed" id="insta-embed"></div>
   </div>
 </section>
 """
@@ -306,8 +308,9 @@ def build(page, lang):
 </section>
 <section class="wedding-band">
   <div class="wrap wedding-banner">
-    <img src="/images/alley.jpg" alt="" loading="lazy">
+    <div class="slideshow" id="wedding-slides" aria-label="{t('nav_wedding')}"></div>
     <div><p class="kicker">{t('nav_wedding')}</p><h2 data-c="stage.wedding_title"></h2><p class="lead" data-c="stage.wedding_text"></p>
+    <div id="wedding-clip" class="wedding-clip"></div>
     <a class="btn" href="{link('wedding')}">{t('wedding_more')}</a></div>
   </div>
 </section>
@@ -317,9 +320,6 @@ def build(page, lang):
       <blockquote class="quote"><span data-c="home.quote"></span><cite data-c="home.quote_by"></cite></blockquote></div>
     <div><h3 style="font-size:1.6rem;margin:0 0 10px;color:var(--khaki)">{t('festivals_title')}</h3><ul class="festivals on-dark" id="festivals"></ul></div>
   </div>
-</section>
-<section>
-  <div class="wrap"><h2>{t('watch_live')}</h2><div id="videos" data-limit="2" class="pair"></div></div>
 </section>
 """
     elif page == "wedding":
@@ -366,27 +366,20 @@ def build(page, lang):
     <p class="kicker">{t('epk_kicker')}</p>
     <h1 style="font-size:clamp(2.8rem,8vw,6rem)">{t('epk_title')}</h1>
     <p class="tag" data-c="press.intro"></p>
-    <div class="downloads" id="downloads"></div>
   </div>
 </section>
-<section>
-  <div class="wrap two">
-    <div><h2>{t('bio_title')}</h2><div id="about-text"></div><blockquote class="quote" style="color:var(--indigo)"><span data-c="home.quote"></span><cite style="color:var(--coral)" data-c="home.quote_by"></cite></blockquote></div>
-    <div><h2>{t('live_title')}</h2><p class="lead" data-c="press.live"></p><ul class="pill-list" id="experience"></ul>
-      <h3 style="font-size:1.6rem;color:var(--indigo);margin:40px 0 10px">{t('festivals_title')}</h3><ul class="festivals" id="festivals"></ul></div>
+<section class="epk">
+  <div class="wrap">
+    <p class="lead epk-hint">{t('epk_hint')}</p>
+    <details class="acc"><summary>{t('downloads_title')}</summary><div class="acc-body"><div class="downloads" id="downloads"></div></div></details>
+    <details class="acc"><summary>{t('bio_title')}</summary><div class="acc-body"><div id="about-text"></div><blockquote class="quote" style="color:var(--indigo)"><span data-c="home.quote"></span><cite style="color:var(--coral)" data-c="home.quote_by"></cite></blockquote></div></details>
+    <details class="acc"><summary>{t('live_title')}</summary><div class="acc-body"><p class="lead" data-c="press.live"></p><ul class="pill-list" id="experience"></ul></div></details>
+    <details class="acc"><summary>{t('festivals_title')}</summary><div class="acc-body"><ul class="festivals" id="festivals"></ul></div></details>
+    <details class="acc"><summary>{t('band_title')}</summary><div class="acc-body"><div id="members"></div></div></details>
+    <details class="acc"><summary>{t('music_title')}</summary><div class="acc-body"><div id="videos"></div></div></details>
+    <details class="acc" id="press-sec"><summary>{t('press_title')}</summary><div class="acc-body"><div class="media-list" id="media"></div></div></details>
+    <details class="acc"><summary>{t('photos_title')}</summary><div class="acc-body"><div class="gallery" id="photos"></div></div></details>
   </div>
-</section>
-<section class="about">
-  <div class="wrap"><h2>{t('band_title')}</h2><div id="members" style="margin-top:20px"></div></div>
-</section>
-<section>
-  <div class="wrap"><h2>{t('music_title')}</h2><div id="videos"></div></div>
-</section>
-<section class="press-sec" id="press-sec">
-  <div class="wrap"><h2>{t('press_title')}</h2><div class="media-list" id="media"></div></div>
-</section>
-<section style="padding-top:0">
-  <div class="wrap"><h2>{t('photos_title')}</h2><div class="gallery" id="photos"></div></div>
 </section>
 """
     else:

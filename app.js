@@ -171,14 +171,22 @@
       h("span", {}, h("b", { text: L(m, "title") }), h("small", { text: [L(m, "outlet"), m.date ? new Date(m.date + "T12:00:00").toLocaleDateString(lang === "en" ? "en-GB" : "he-IL", { month: "long", year: "numeric" }) : ""].filter(Boolean).join(" · ") })))));
   }
 
-  // Instagram: profile link + embedded posts from the admin panel
+  // Instagram: embedded profile (latest posts update by themselves)
   const ig = g.instagram || {};
   if ($("#insta-link") && ig.url) $("#insta-link").href = ig.url;
-  const ip = $("#insta-posts");
-  if (ip && (ig.posts || []).length) {
-    ip.replaceChildren(...ig.posts.map((url) => h("blockquote", { class: "instagram-media", "data-instgrm-permalink": url, "data-instgrm-version": "14" }, h("a", { href: url, target: "_blank", rel: "noopener", text: "Instagram" }))));
-    const sc = document.createElement("script"); sc.src = "https://www.instagram.com/embed.js"; sc.async = true; document.body.append(sc);
+  const ie = $("#insta-embed");
+  if (ie && ig.handle) ie.replaceChildren(h("iframe", { src: `https://www.instagram.com/${ig.handle}/embed/`, title: "Instagram", loading: "lazy", scrolling: "no", allowtransparency: "true" }));
+
+  // Wedding block on the Shows & events page: rotating photos + clip
+  const ws = $("#wedding-slides");
+  if (ws && (stage.wedding_photos || []).length) {
+    const imgs = stage.wedding_photos.map((src, i) => h("img", { src, alt: "", loading: i ? "lazy" : null, class: i ? "" : "on" }));
+    ws.replaceChildren(...imgs);
+    let k = 0;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (imgs.length > 1 && !reduce) setInterval(() => { imgs[k].classList.remove("on"); k = (k + 1) % imgs.length; imgs[k].classList.add("on"); }, 4000);
   }
+  if ($("#wedding-clip") && stage.wedding_video) $("#wedding-clip").replaceChildren(player(stage.wedding_video, L(stage, "wedding_title")));
 
   // Press kit page
   const dl = $("#downloads");

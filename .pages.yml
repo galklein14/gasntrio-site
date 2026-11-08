@@ -141,6 +141,8 @@ content:
       - { name: wedding_title_en, label: "כותרת החתונות · English", type: string }
       - { name: wedding_text_he, label: "טקסט החתונות · עברית", type: text }
       - { name: wedding_text_en, label: "טקסט החתונות · English", type: text }
+      - { name: wedding_photos, label: "תמונות מתחלפות בחלק החתונות", type: image, list: true }
+      - { name: wedding_video, label: "קליפ חתונה (קישור יוטיוב)", type: string }
 
   # ---------- Weddings (landing page) ----------
   - name: events
@@ -276,7 +278,6 @@ content:
         fields:
           - { name: handle, label: "שם המשתמש", type: string }
           - { name: url, label: "קישור לפרופיל", type: string }
-          - { name: posts, label: "פוסטים להצגה בדף הבית (קישור לפוסט, עד 6)", type: string, list: true }
       - name: social
         label: "רשתות חברתיות"
         type: object

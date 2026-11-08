@@ -38,8 +38,8 @@
       "text_he": "חתונות, בר ובת מצווה, בריתות ושמחות משפחתיות: מוזיקה לטקס ולמסיבה.",
       "text_en": "Weddings, bar and bat mitzvahs, brit celebrations and family events: music for the ceremony and for the party.",
       "image": "/images/alley.jpg",
-      "link_en": "/wedding/",
-      "link_he": "/he/lpwedding/"
+      "link_en": "",
+      "link_he": ""
     },
     {
       "he": "הרצאות",
@@ -54,5 +54,13 @@
   "wedding_title_en": "Klezmer band for your wedding",
   "wedding_title_he": "להקת כליזמר לחתונה",
   "wedding_text_en": "Reception, chuppah, procession and dancing: we color the whole wedding with happy, live music.",
-  "wedding_text_he": "קבלת פנים, חופה, תהלוכה וריקודים: אנחנו צובעים את כל החתונה במוזיקה שמחה וחיה."
+  "wedding_text_he": "קבלת פנים, חופה, תהלוכה וריקודים: אנחנו צובעים את כל החתונה במוזיקה שמחה וחיה.",
+  "wedding_photos": [
+    "/images/alley.jpg",
+    "/images/dance.jpg",
+    "/images/procession.jpg",
+    "/images/events.jpg",
+    "/images/vineyard.jpg"
+  ],
+  "wedding_video": "https://www.youtube.com/watch?v=YxjId-9_1JA"
 }
