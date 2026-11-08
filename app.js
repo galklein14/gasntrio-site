@@ -27,14 +27,14 @@
   const u = (k) => UI[k][lang === "en" ? 0 : 1];
 
   const load = (n) => fetch(`/content/${n}.json`, { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(n); return r.json(); });
-  let g, home, members, shows, music, events, press;
+  let g, home, members, shows, music, events, press, stage;
   try {
-    [g, home, members, shows, music, events, press] = await Promise.all(["general", "home", "members", "shows", "music", "events", "press"].map(load));
+    [g, home, members, shows, music, events, press, stage] = await Promise.all(["general", "home", "members", "shows", "music", "events", "press", "stage"].map(load));
   } catch (e) {
     document.body.prepend(h("p", { style: "background:#E4573D;color:#fff;padding:12px;margin:0;text-align:center", text: lang === "en" ? "The site content could not be loaded. Refresh the page to try again." : "לא הצלחנו לטעון את תוכן האתר. רעננו את הדף כדי לנסות שוב." }));
     return;
   }
-  const data = { home, events, press, music };
+  const data = { home, events, press, music, stage };
 
   // Bilingual text bindings: data-c="home.tagline" reads home.tagline_he / tagline_en
   document.querySelectorAll("[data-c]").forEach((el) => {
@@ -63,6 +63,7 @@
   // Home hero image
   if ($("#hero-img") && home.hero_image) $("#hero-img").src = home.hero_image;
   if ($("#events-hero") && events.hero_image) $("#events-hero").src = events.hero_image;
+  if ($("#stage-hero") && stage.hero_image) $("#stage-hero").src = stage.hero_image;
 
   // About text (home + press kit)
   paras($("#about-text"), home[`about_${lang}`]);
@@ -148,6 +149,35 @@
   const ts = $("#testimonials");
   if (ts) ts.replaceChildren(...(events.testimonials || []).map((x) =>
     h("blockquote", { class: "testimonial", lang: x.lang || null, dir: x.lang === "he" ? "rtl" : x.lang === "en" ? "ltr" : null }, h("p", { text: `“${x.text}”` }), h("cite", { text: x.by }))));
+
+  // Shows & events page
+  const of = $("#offerings");
+  if (of) of.replaceChildren(...(stage.offerings || []).map((o) => {
+    const card = h("article", { class: "service" },
+      o.image ? h("img", { src: o.image, alt: "", loading: "lazy" }) : null,
+      h("div", {}, h("h3", { text: o[lang] }), h("p", { text: L(o, "text") })));
+    return o.link ? h("a", { href: o.link, class: "card-link" }, card) : card;
+  }));
+
+  // Press & radio (shown only when there are items)
+  const md = $("#media");
+  if (md) {
+    const items = (press.media || []).filter((m) => m.url).sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
+    const icon = { radio: "📻", article: "📰", tv: "📺", podcast: "🎙" };
+    if (!items.length) $("#press-sec").hidden = true;
+    else md.replaceChildren(...items.map((m) => h("a", { class: "media-item", href: m.url, target: "_blank", rel: "noopener" },
+      h("span", { class: "media-icon", "aria-hidden": "true", text: icon[m.type] || "🔗" }),
+      h("span", {}, h("b", { text: L(m, "title") }), h("small", { text: [L(m, "outlet"), m.date ? new Date(m.date + "T12:00:00").toLocaleDateString(lang === "en" ? "en-GB" : "he-IL", { month: "long", year: "numeric" }) : ""].filter(Boolean).join(" · ") })))));
+  }
+
+  // Instagram: profile link + embedded posts from the admin panel
+  const ig = g.instagram || {};
+  if ($("#insta-link") && ig.url) $("#insta-link").href = ig.url;
+  const ip = $("#insta-posts");
+  if (ip && (ig.posts || []).length) {
+    ip.replaceChildren(...ig.posts.map((url) => h("blockquote", { class: "instagram-media", "data-instgrm-permalink": url, "data-instgrm-version": "14" }, h("a", { href: url, target: "_blank", rel: "noopener", text: "Instagram" }))));
+    const sc = document.createElement("script"); sc.src = "https://www.instagram.com/embed.js"; sc.async = true; document.body.append(sc);
+  }
 
   // Press kit page
   const dl = $("#downloads");

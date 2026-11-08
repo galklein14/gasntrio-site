@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Press kit | Di Gasn Trio</title>
-<meta name="description" content="Biography, press photos, technical rider and videos of Di Gasn Trio.">
-<link rel="canonical" href="https://gasntrio.com/en/epk/">
-<link rel="alternate" hreflang="he" href="https://gasntrio.com/epk/">
-<link rel="alternate" hreflang="en" href="https://gasntrio.com/en/epk/">
-<link rel="alternate" hreflang="x-default" href="https://gasntrio.com/epk/">
-<meta property="og:title" content="Press kit | Di Gasn Trio">
-<meta property="og:description" content="Biography, press photos, technical rider and videos of Di Gasn Trio.">
+<title>Klezmer band for your wedding | Di Gasn Trio</title>
+<meta name="description" content="A live klezmer and Balkan band for your wedding: reception, chuppah, procession and dancing.">
+<link rel="canonical" href="https://gasntrio.com/wedding/">
+<link rel="alternate" hreflang="he" href="https://gasntrio.com/he/lpwedding/">
+<link rel="alternate" hreflang="en" href="https://gasntrio.com/wedding/">
+<link rel="alternate" hreflang="x-default" href="https://gasntrio.com/wedding/">
+<meta property="og:title" content="Klezmer band for your wedding | Di Gasn Trio">
+<meta property="og:description" content="A live klezmer and Balkan band for your wedding: reception, chuppah, procession and dancing.">
 <meta property="og:image" content="https://gasntrio.com/images/hero.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -20,20 +20,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
-<body data-page="epk">
+<body data-page="wedding" class="landing">
 <a class="skip" href="#main">Skip to content</a>
 <header class="bar">
   <div class="wrap bar-inner">
-    <a class="logo" href="/en/"><img src="/images/logo-cream.png" alt="Di Gasn Trio · די גאסן טריו" width="160" height="50"></a>
+    <a class="logo" href="/"><img src="/images/logo-cream.png" alt="Di Gasn Trio · די גאסן טריו" width="160" height="50"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Main">
-      <a href="/en/about/">About</a>
-      <a href="/en/concerts/">Concerts</a>
-      <a href="/en/music/">Music</a>
-      <a href="/en/di-gasn-events/">Events</a>
-      <a href="/en/lpwedding/">Weddings</a>
-      <a href="/en/epk/" aria-current="page">EPK</a>
-      <a class="lang" href="/epk/" hreflang="he" lang="he">עברית</a>
+      <a href="/about/">About</a>
+      <a href="/concerts/">Concerts</a>
+      <a href="/music/">Music</a>
+      <a href="/events/">Shows & Events</a>
+      <a href="/wedding/" aria-current="page">Weddings</a>
+      <a href="/epk/">EPK</a>
+      <a class="lang" href="/he/lpwedding/" hreflang="he" lang="he">עברית</a>
       <a class="btn small" href="#contact">Book us</a>
     </nav>
   </div>
@@ -41,29 +41,37 @@
 <main id="main">
 
 <section class="hero short">
-  <img src="/images/live-3.jpg" alt="" fetchpriority="high">
+  <img id="events-hero" src="/images/events.jpg" alt="" fetchpriority="high">
   <div class="wrap">
-    <p class="kicker">Electronic press kit</p>
-    <h1 style="font-size:clamp(2.8rem,8vw,6rem)">Press kit</h1>
-    <p class="tag" data-c="press.intro"></p>
-    <div class="downloads" id="downloads"></div>
+    <p class="kicker">Weddings & events</p>
+    <h1 data-c="events.title" style="font-size:clamp(2.6rem,7vw,5.4rem)"></h1>
+    <p class="tag" data-c="events.intro"></p>
+    <div class="ctas"><a class="btn" href="#contact">Book the band</a></div>
   </div>
 </section>
 <section>
+  <div class="wrap">
+    <h2>Upgrade your event</h2>
+    <p class="lead" data-c="events.question"></p>
+    <div class="services" id="services"></div>
+  </div>
+</section>
+<section class="band-text">
   <div class="wrap two">
-    <div><h2>Biography</h2><div id="about-text"></div><blockquote class="quote" style="color:var(--indigo)"><span data-c="home.quote"></span><cite style="color:var(--coral)" data-c="home.quote_by"></cite></blockquote></div>
-    <div><h2>Live experience</h2><p class="lead" data-c="press.live"></p><ul class="pill-list" id="experience"></ul>
-      <h3 style="font-size:1.6rem;color:var(--indigo);margin:40px 0 10px">Selected festivals & venues</h3><ul class="festivals" id="festivals"></ul></div>
+    <div id="events-text"></div>
+    <div class="stack"><h3 style="font-size:1.6rem;color:var(--indigo);margin:0">See us at a wedding</h3><div class="stack" id="events-videos"></div></div>
   </div>
 </section>
-<section class="about">
-  <div class="wrap"><h2>The band</h2><div id="members" style="margin-top:20px"></div></div>
+<section class="testimonials">
+  <div class="wrap">
+    <h2>What couples say</h2>
+    <div id="testimonials"></div>
+  </div>
 </section>
-<section>
-  <div class="wrap"><h2>Listen & watch</h2><div id="videos"></div></div>
-</section>
-<section style="padding-top:0">
-  <div class="wrap"><h2>Photos</h2><div class="gallery" id="photos"></div></div>
+<section style="padding-bottom:0">
+  <div class="wrap gallery">
+    <img src="/images/alley.jpg" alt="" loading="lazy"><img src="/images/procession.jpg" alt="" loading="lazy"><img src="/images/dance.jpg" alt="" loading="lazy">
+  </div>
 </section>
 
 <section class="contact" id="contact">
@@ -95,7 +103,7 @@
       <div><img src="/images/logo-cream.png" alt="Di Gasn Trio" width="172" height="54"><ul id="social"></ul></div>
       <div id="foot-contact"></div>
     </div>
-    <p class="fine">© <span id="year"></span> Di Gasn Trio · All rights reserved<a href="/en/privacypolicy/">Privacy policy</a></p>
+    <p class="fine">© <span id="year"></span> Di Gasn Trio · All rights reserved<a href="/privacypolicy/">Privacy policy</a></p>
   </div>
 </footer>
 <script src="/app.js" defer></script>

@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Di Gasn Trio | Israeli Balkan-Klezmer Band</title>
-<meta name="description" content="Di Gasn Trio: klezmer and Balkan music from Jerusalem. Concerts, festivals, weddings and events in Israel and abroad.">
-<link rel="canonical" href="https://gasntrio.com/en/">
-<link rel="alternate" hreflang="he" href="https://gasntrio.com/">
-<link rel="alternate" hreflang="en" href="https://gasntrio.com/en/">
-<link rel="alternate" hreflang="x-default" href="https://gasntrio.com/">
-<meta property="og:title" content="Di Gasn Trio | Israeli Balkan-Klezmer Band">
-<meta property="og:description" content="Di Gasn Trio: klezmer and Balkan music from Jerusalem. Concerts, festivals, weddings and events in Israel and abroad.">
+<title>Klezmer band for weddings and events | Di Gasn Trio</title>
+<meta name="description" content="A live klezmer and Balkan band for your wedding: reception, chuppah, procession and dancing.">
+<link rel="canonical" href="https://gasntrio.com/events/">
+<link rel="alternate" hreflang="he" href="https://gasntrio.com/he/di-gasn-events/">
+<link rel="alternate" hreflang="en" href="https://gasntrio.com/events/">
+<link rel="alternate" hreflang="x-default" href="https://gasntrio.com/events/">
+<meta property="og:title" content="Klezmer band for weddings and events | Di Gasn Trio">
+<meta property="og:description" content="A live klezmer and Balkan band for your wedding: reception, chuppah, procession and dancing.">
 <meta property="og:image" content="https://gasntrio.com/images/hero.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -20,48 +20,57 @@
 <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
-<body data-page="home">
+<body data-page="events">
 <a class="skip" href="#main">Skip to content</a>
 <header class="bar">
   <div class="wrap bar-inner">
-    <a class="logo" href="/en/"><img src="/images/logo-cream.png" alt="Di Gasn Trio · די גאסן טריו" width="160" height="50"></a>
+    <a class="logo" href="/"><img src="/images/logo-cream.png" alt="Di Gasn Trio · די גאסן טריו" width="160" height="50"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Main">
-      <a href="/en/about/">About</a>
-      <a href="/en/concerts/">Concerts</a>
-      <a href="/en/music/">Music</a>
-      <a href="/en/di-gasn-events/">Events</a>
-      <a href="/en/lpwedding/">Weddings</a>
-      <a href="/en/epk/">EPK</a>
-      <a class="lang" href="/" hreflang="he" lang="he">עברית</a>
+      <a href="/about/">About</a>
+      <a href="/concerts/">Concerts</a>
+      <a href="/music/">Music</a>
+      <a href="/events/" aria-current="page">Shows & Events</a>
+      <a href="/wedding/">Weddings</a>
+      <a href="/epk/">EPK</a>
+      <a class="lang" href="/he/di-gasn-events/" hreflang="he" lang="he">עברית</a>
       <a class="btn small" href="#contact">Book us</a>
     </nav>
   </div>
 </header>
 <main id="main">
 
-<section class="hero">
-  <img id="hero-img" src="/images/hero.jpg" alt="" fetchpriority="high">
+<section class="hero short">
+  <img id="stage-hero" src="/images/live-2.jpg" alt="" fetchpriority="high">
   <div class="wrap">
-    <p class="kicker" data-c="home.kicker"></p>
-    <h1>Di Gasn Trio<span class="sub" lang="he">די גאסן טריו</span></h1>
-    <p class="tag" data-c="home.tagline"></p>
-    <div class="ctas"><a class="btn" href="#contact">Book the band</a><a class="btn ghost" href="/en/music/">Listen</a><a class="btn ghost" href="/en/lpwedding/">Weddings</a></div>
+    <p class="kicker">Shows & Events</p>
+    <h1 data-c="stage.title" style="font-size:clamp(2.6rem,7vw,5.4rem)"></h1>
+    <p class="tag" data-c="stage.intro"></p>
+    <div class="ctas"><a class="btn" href="#contact">Book the band</a></div>
   </div>
 </section>
 <section>
   <div class="wrap">
-    <div class="featured" id="featured"></div>
-    <div id="videos" data-limit="2" class="pair"></div>
-    <p style="margin-top:28px"><a class="btn ink" href="/en/music/">More music</a></p>
+    <h2>What we offer</h2>
+    <div class="services offerings" id="offerings"></div>
+  </div>
+</section>
+<section class="wedding-band">
+  <div class="wrap wedding-banner">
+    <img src="/images/alley.jpg" alt="" loading="lazy">
+    <div><p class="kicker">Weddings</p><h2 data-c="stage.wedding_title"></h2><p class="lead" data-c="stage.wedding_text"></p>
+    <a class="btn" href="/wedding/">Weddings: all the details</a></div>
   </div>
 </section>
 <section class="about">
-  <div class="wrap">
-    <div class="shows-head"><h2>Upcoming shows</h2><img src="/images/collage-birds.webp" alt="" width="170" height="147" loading="lazy"></div>
-    <div id="shows-list" data-limit="3" class="on-dark"></div>
-    <p style="margin-top:20px"><a class="btn" href="/en/concerts/">All concerts</a></p>
+  <div class="wrap two">
+    <div><h2>Live experience</h2><p class="lead" data-c="press.live"></p><ul class="pill-list" id="experience"></ul>
+      <blockquote class="quote"><span data-c="home.quote"></span><cite data-c="home.quote_by"></cite></blockquote></div>
+    <div><h3 style="font-size:1.6rem;margin:0 0 10px;color:var(--khaki)">Selected festivals & venues</h3><ul class="festivals on-dark" id="festivals"></ul></div>
   </div>
+</section>
+<section>
+  <div class="wrap"><h2>Watch us live</h2><div id="videos" data-limit="2" class="pair"></div></div>
 </section>
 
 <section class="contact" id="contact">
@@ -93,7 +102,7 @@
       <div><img src="/images/logo-cream.png" alt="Di Gasn Trio" width="172" height="54"><ul id="social"></ul></div>
       <div id="foot-contact"></div>
     </div>
-    <p class="fine">© <span id="year"></span> Di Gasn Trio · All rights reserved<a href="/en/privacypolicy/">Privacy policy</a></p>
+    <p class="fine">© <span id="year"></span> Di Gasn Trio · All rights reserved<a href="/privacypolicy/">Privacy policy</a></p>
   </div>
 </footer>
 <script src="/app.js" defer></script>

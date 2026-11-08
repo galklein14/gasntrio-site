@@ -1,4 +1,15 @@
-/events      /di-gasn-events/     301
-/en/events   /en/di-gasn-events/  301
-/wedding     /lpwedding/          301
-/privacy     /privacypolicy/      301
+# Old Wix Hebrew pages -> Hebrew versions
+/di-gasn-events      /he/di-gasn-events/   301
+/di-gasn-events/     /he/di-gasn-events/   301
+/lpwedding           /he/lpwedding/        301
+/lpwedding/          /he/lpwedding/        301
+# Short aliases
+/privacy             /privacypolicy/       301
+/he/events           /he/di-gasn-events/   301
+/he/wedding          /he/lpwedding/        301
+# Earlier layout (English under /en/) -> English at the root
+/en                  /                     301
+/en/                 /                     301
+/en/di-gasn-events/  /events/              301
+/en/lpwedding/       /wedding/             301
+/en/*                /:splat               301

@@ -224,3 +224,32 @@ footer { background: var(--ink); color: var(--paper); padding: 50px 0 30px; }
   .full-bios .member { flex-direction: column; }
   .full-bios .member img { width: 100%; aspect-ratio: 1; }
 }
+
+/* Shows & events */
+.card-link { text-decoration: none; color: inherit; display: block; }
+.card-link .service { height: 100%; transition: transform .15s; }
+.card-link:hover .service { transform: translateY(-4px); }
+.wedding-band { background: var(--paper-2); }
+.wedding-banner { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(24px, 4vw, 50px); align-items: center; }
+.wedding-banner img { border-radius: 200px 200px 16px 16px; border: 2px solid var(--ink); }
+.festivals.on-dark li { border-bottom-color: #F5ECD044; }
+.festivals.on-dark li::before { color: var(--khaki); }
+
+/* Press & radio */
+.media-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.media-item { display: flex; gap: 14px; align-items: center; text-decoration: none; background: var(--card); border: 2px solid var(--ink); border-radius: 14px; padding: 14px 18px; transition: transform .15s; }
+.media-item:hover { transform: translateY(-2px); }
+.media-icon { font-size: 1.6rem; }
+.media-item b { display: block; color: var(--indigo); }
+.media-item small { color: #1B1B2Aaa; font-size: .9rem; }
+
+/* Instagram */
+.insta-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.insta-head h2 { margin: 0; }
+.insta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: start; }
+.insta-grid:empty { display: none; }
+.insta-grid .instagram-media { min-width: 0 !important; width: 100% !important; margin: 0 !important; }
+@media (max-width: 820px) {
+  .wedding-banner, .media-list, .insta-grid { grid-template-columns: 1fr; }
+}
+.about .empty { color: var(--paper); opacity: .85; }

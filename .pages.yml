@@ -110,9 +110,40 @@ content:
       - { name: bio_en, label: "ביוגרפיה · English", type: text }
       - { name: website, label: "אתר אישי (לא חובה)", type: string }
 
-  # ---------- Weddings & events ----------
+  # ---------- Shows & events ----------
+  - name: stage
+    label: "מופעים ואירועים"
+    type: file
+    path: content/stage.json
+    format: json
+    fields:
+      - { name: hero_image, label: "תמונה ראשית", type: image }
+      - { name: title_he, label: "כותרת · עברית", type: string }
+      - { name: title_en, label: "כותרת · English", type: string }
+      - { name: intro_he, label: "פתיח · עברית", type: text }
+      - { name: intro_en, label: "פתיח · English", type: text }
+      - name: offerings
+        label: "סוגי מופעים"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{he}"
+        fields:
+          - { name: he, label: "שם · עברית", type: string }
+          - { name: en, label: "שם · English", type: string }
+          - { name: text_he, label: "תיאור · עברית", type: text }
+          - { name: text_en, label: "תיאור · English", type: text }
+          - { name: image, label: "תמונה", type: image }
+          - { name: link, label: "קישור (לא חובה)", type: string }
+      - { name: wedding_title_he, label: "כותרת החתונות · עברית", type: string }
+      - { name: wedding_title_en, label: "כותרת החתונות · English", type: string }
+      - { name: wedding_text_he, label: "טקסט החתונות · עברית", type: text }
+      - { name: wedding_text_en, label: "טקסט החתונות · English", type: text }
+
+  # ---------- Weddings (landing page) ----------
   - name: events
-    label: "חתונות ואירועים"
+    label: "חתונות (עמוד נחיתה)"
     type: file
     path: content/events.json
     format: json
@@ -190,6 +221,29 @@ content:
           - { name: he, label: "עברית", type: string }
           - { name: en, label: "English", type: string }
       - { name: photos, label: "תמונות", type: image, list: true }
+      - name: media
+        label: "ראיונות וכתבות (רדיו, עיתונות, טלוויזיה)"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{date} · {title_he}"
+        fields:
+          - name: type
+            label: "סוג"
+            type: select
+            options:
+              values:
+                - { value: radio, label: "רדיו" }
+                - { value: article, label: "כתבה" }
+                - { value: tv, label: "טלוויזיה" }
+                - { value: podcast, label: "פודקאסט" }
+          - { name: title_he, label: "כותרת · עברית", type: string }
+          - { name: title_en, label: "כותרת · English", type: string }
+          - { name: outlet_he, label: "כלי תקשורת · עברית (למשל: גלי צה״ל)", type: string }
+          - { name: outlet_en, label: "כלי תקשורת · English", type: string }
+          - { name: date, label: "תאריך", type: date, options: { format: yyyy-MM-dd } }
+          - { name: url, label: "קישור", type: string, required: true }
 
   # ---------- General ----------
   - name: general
@@ -215,6 +269,13 @@ content:
         fields:
           - { name: artist_id, label: "מספר אמן", type: string }
           - { name: url, label: "קישור לעמוד", type: string }
+      - name: instagram
+        label: "אינסטגרם"
+        type: object
+        fields:
+          - { name: handle, label: "שם המשתמש", type: string }
+          - { name: url, label: "קישור לפרופיל", type: string }
+          - { name: posts, label: "פוסטים להצגה בדף הבית (קישור לפוסט, עד 6)", type: string, list: true }
       - name: social
         label: "רשתות חברתיות"
         type: object

@@ -3,14 +3,20 @@
 האתר של די גאסן טריו, בעברית ובאנגלית. HTML, CSS ו-JavaScript, בלי שרת ובלי מנוי.
 
 ## כתובות
-| עמוד | עברית | English |
-|---|---|---|
-| דף הבית | `/` | `/en/` |
-| חתונות ואירועים | `/events/` | `/en/events/` |
-| ערכת עיתונות | `/epk/` | `/en/epk/` |
-| מדיניות פרטיות | `/privacy/` | `/en/privacy/` |
+האנגלית היא שפת ברירת המחדל; העברית תחת `/he/`.
 
-הכתובות הישנות מ-Wix (`/about`, `/concerts`, `/music`, `/lpwedding`, `/di-gasn-events`, `/privacypolicy`) מופנות לעמודים החדשים בקובץ `_redirects`.
+| עמוד | English | עברית |
+|---|---|---|
+| דף הבית | `/` | `/he/` |
+| About | `/about/` | `/he/about/` |
+| Concerts | `/concerts/` | `/he/concerts/` |
+| Music | `/music/` | `/he/music/` |
+| מופעים ואירועים | `/events/` | `/he/di-gasn-events/` |
+| חתונות (עמוד נחיתה) | `/wedding/` | `/he/lpwedding/` |
+| EPK | `/epk/` | `/he/epk/` |
+| מדיניות פרטיות | `/privacypolicy/` | `/he/privacypolicy/` |
+
+הכתובות הישנות מ-Wix שהיו בעברית (`/lpwedding`, `/di-gasn-events`) מופנות לגרסה העברית בקובץ `_redirects`.
 
 ## איפה עורכים
 כל התוכן נמצא בתיקייה `content/`, ועורכים אותו דרך **Pages CMS** (app.pagescms.org, כניסה עם GitHub). לכל טקסט יש שדה בעברית ושדה באנגלית.
@@ -21,7 +27,8 @@
 | מוזיקה וסרטונים | `content/music.json` |
 | דף הבית | `content/home.json` |
 | חברי ההרכב | `content/members.json` |
-| חתונות ואירועים | `content/events.json` |
+| מופעים ואירועים | `content/stage.json` |
+| חתונות (עמוד נחיתה) | `content/events.json` |
 | ערכת עיתונות | `content/press.json` |
 | הגדרות כלליות | `content/general.json` |
 

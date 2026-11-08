@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>די גאסן טריו | להקת בלקן-כליזמר ישראלית</title>
+<meta name="description" content="די גאסן טריו: מוזיקת כליזמר ובלקן מירושלים. הופעות, פסטיבלים, חתונות ואירועים בארץ ובחו״ל.">
+<link rel="canonical" href="https://gasntrio.com/he/">
+<link rel="alternate" hreflang="he" href="https://gasntrio.com/he/">
+<link rel="alternate" hreflang="en" href="https://gasntrio.com/">
+<link rel="alternate" hreflang="x-default" href="https://gasntrio.com/">
+<meta property="og:title" content="די גאסן טריו | להקת בלקן-כליזמר ישראלית">
+<meta property="og:description" content="די גאסן טריו: מוזיקת כליזמר ובלקן מירושלים. הופעות, פסטיבלים, חתונות ואירועים בארץ ובחו״ל.">
+<meta property="og:image" content="https://gasntrio.com/images/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body data-page="home">
+<a class="skip" href="#main">דילוג לתוכן</a>
+<header class="bar">
+  <div class="wrap bar-inner">
+    <a class="logo" href="/he/"><img src="/images/logo-cream.png" alt="Di Gasn Trio · די גאסן טריו" width="160" height="50"></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">תפריט</button>
+    <nav id="nav" aria-label="Main">
+      <a href="/he/about/">עלינו</a>
+      <a href="/he/concerts/">הופעות</a>
+      <a href="/he/music/">מוזיקה</a>
+      <a href="/he/di-gasn-events/">מופעים ואירועים</a>
+      <a href="/he/lpwedding/">חתונות</a>
+      <a href="/he/epk/">ערכת עיתונות</a>
+      <a class="lang" href="/" hreflang="en" lang="en">English</a>
+      <a class="btn small" href="#contact">הזמינו אותנו</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <img id="hero-img" src="/images/hero.jpg" alt="" fetchpriority="high">
+  <div class="wrap">
+    <p class="kicker" data-c="home.kicker"></p>
+    <h1>די גאסן טריו<span class="sub" lang="en">Di Gasn Trio</span></h1>
+    <p class="tag" data-c="home.tagline"></p>
+    <div class="ctas"><a class="btn" href="#contact">הזמינו את הלהקה</a><a class="btn ghost" href="/he/music/">להאזנה</a><a class="btn ghost" href="/he/lpwedding/">חתונות</a></div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="featured" id="featured"></div>
+    <div id="videos" data-limit="2" class="pair"></div>
+    <p style="margin-top:28px"><a class="btn ink" href="/he/music/">עוד מוזיקה</a></p>
+  </div>
+</section>
+<section class="about">
+  <div class="wrap">
+    <div class="shows-head"><h2>הופעות קרובות</h2><img src="/images/collage-birds.webp" alt="" width="170" height="147" loading="lazy"></div>
+    <div id="shows-list" data-limit="3" class="on-dark"></div>
+    <p style="margin-top:20px"><a class="btn" href="/he/concerts/">לכל ההופעות</a></p>
+  </div>
+</section>
+<section class="insta" id="insta">
+  <div class="wrap">
+    <div class="insta-head"><h2>באינסטגרם</h2><a class="btn ink" id="insta-link" href="https://www.instagram.com/balkan.klezmer.band/" target="_blank" rel="noopener">עקבו אחרינו · @balkan.klezmer.band</a></div>
+    <div class="insta-grid" id="insta-posts"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>בואו נדבר</h2>
+      <p class="lead">הופעות, פסטיבלים, חתונות ואירועים פרטיים, בארץ ובחו״ל. ספרו לנו מה התאריך, איפה ומה חוגגים.</p>
+      <div class="direct" id="direct"></div>
+    </div>
+    <form id="form" action="https://api.web3forms.com/submit" method="POST" hidden>
+      <input type="hidden" name="access_key" id="form-key">
+      <input type="hidden" name="subject" value="gasntrio.com">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+      <label>שם<input name="name" required autocomplete="name"></label>
+      <label>אימייל<input name="email" type="email" required autocomplete="email"></label>
+      <label>טלפון<input name="phone" type="tel" autocomplete="tel"></label>
+      <label>תאריך האירוע<input name="event_date" type="date"></label>
+      <label class="full">סוג האירוע<select name="event_type"><option>הופעה / פסטיבל</option><option>חתונה</option><option>בר / בת מצווה</option><option>אירוע פרטי או של חברה</option><option>אחר</option></select></label>
+      <label class="full">הודעה<textarea name="message" required></textarea></label>
+      <div class="full"><button class="btn" type="submit">שליחה</button></div>
+      <p class="form-status full" id="form-status" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="/images/logo-cream.png" alt="Di Gasn Trio" width="172" height="54"><ul id="social"></ul></div>
+      <div id="foot-contact"></div>
+    </div>
+    <p class="fine">© <span id="year"></span> Di Gasn Trio · כל הזכויות שמורות<a href="/he/privacypolicy/">מדיניות פרטיות</a></p>
+  </div>
+</footer>
+<script src="/app.js" defer></script>
+</body>
+</html>

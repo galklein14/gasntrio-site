@@ -4,8 +4,16 @@
   "logo": "/images/logo-cream.png",
   "email": "gasntrio@gmail.com",
   "phones": [
-    { "number": "+972-52-5287100", "name_en": "Gal", "name_he": "גל" },
-    { "number": "+972-52-3924464", "name_en": "Yanush", "name_he": "ינוש" }
+    {
+      "number": "+972-52-5287100",
+      "name_en": "Gal",
+      "name_he": "גל"
+    },
+    {
+      "number": "+972-52-3924464",
+      "name_en": "Yanush",
+      "name_he": "ינוש"
+    }
   ],
   "whatsapp": "972525287100",
   "spotify_artist": "5V0svTHulB2Yb5OUdr30if",
@@ -15,13 +23,42 @@
     "url": "https://www.bandsintown.com/a/9277702-di-gasn-trio"
   },
   "social": [
-    { "label": "Instagram", "url": "https://www.instagram.com/balkan.klezmer.band/" },
-    { "label": "Facebook", "url": "https://www.facebook.com/gasntrio/" },
-    { "label": "YouTube", "url": "https://www.youtube.com/channel/UCoA9g0xn8L1frRq2a4RG6dQ" },
-    { "label": "Spotify", "url": "https://open.spotify.com/artist/5V0svTHulB2Yb5OUdr30if" },
-    { "label": "Apple Music", "url": "https://music.apple.com/il/artist/di-gasn-trio/1353182328" },
-    { "label": "Bandcamp", "url": "https://gasntrio.bandcamp.com/" },
-    { "label": "SoundCloud", "url": "https://soundcloud.com/di-gasn-trio" },
-    { "label": "WhatsApp", "url": "https://chat.whatsapp.com/FAGubW9sRaU8F1ZF9ZgQm3" }
-  ]
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/balkan.klezmer.band/"
+    },
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/gasntrio/"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/channel/UCoA9g0xn8L1frRq2a4RG6dQ"
+    },
+    {
+      "label": "Spotify",
+      "url": "https://open.spotify.com/artist/5V0svTHulB2Yb5OUdr30if"
+    },
+    {
+      "label": "Apple Music",
+      "url": "https://music.apple.com/il/artist/di-gasn-trio/1353182328"
+    },
+    {
+      "label": "Bandcamp",
+      "url": "https://gasntrio.bandcamp.com/"
+    },
+    {
+      "label": "SoundCloud",
+      "url": "https://soundcloud.com/di-gasn-trio"
+    },
+    {
+      "label": "WhatsApp",
+      "url": "https://chat.whatsapp.com/FAGubW9sRaU8F1ZF9ZgQm3"
+    }
+  ],
+  "instagram": {
+    "handle": "balkan.klezmer.band",
+    "url": "https://www.instagram.com/balkan.klezmer.band/",
+    "posts": []
+  }
 }
