@@ -278,6 +278,8 @@ content:
         fields:
           - { name: handle, label: "שם המשתמש", type: string }
           - { name: url, label: "קישור לפרופיל", type: string }
+          - { name: widget, label: "קישור לפיד חי (LightWidget / Behold) – אם מוגדר, מוצג במקום הפוסטים", type: string }
+          - { name: posts, label: "פוסטים להצגה בדף הבית (קישור לפוסט, עד 6)", type: string, list: true }
       - name: social
         label: "רשתות חברתיות"
         type: object

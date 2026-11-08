@@ -171,11 +171,19 @@
       h("span", {}, h("b", { text: L(m, "title") }), h("small", { text: [L(m, "outlet"), m.date ? new Date(m.date + "T12:00:00").toLocaleDateString(lang === "en" ? "en-GB" : "he-IL", { month: "long", year: "numeric" }) : ""].filter(Boolean).join(" · ") })))));
   }
 
-  // Instagram: embedded profile (latest posts update by themselves)
+  // Instagram: a live-feed widget (if one is set in the admin panel), otherwise
+  // individual posts pasted as links. Instagram's own profile embed no longer
+  // shows posts, so it isn't used.
   const ig = g.instagram || {};
   if ($("#insta-link") && ig.url) $("#insta-link").href = ig.url;
   const ie = $("#insta-embed");
-  if (ie && ig.handle) ie.replaceChildren(h("iframe", { src: `https://www.instagram.com/${ig.handle}/embed/`, title: "Instagram", loading: "lazy", scrolling: "no", allowtransparency: "true" }));
+  if (ie && ig.widget) {
+    ie.replaceChildren(h("iframe", { src: ig.widget, title: "Instagram", loading: "lazy", scrolling: "no", class: "insta-widget" }));
+  } else if (ie && (ig.posts || []).length) {
+    ie.classList.add("insta-grid");
+    ie.replaceChildren(...ig.posts.slice(0, 6).map((url) => h("blockquote", { class: "instagram-media", "data-instgrm-permalink": url, "data-instgrm-version": "14" }, h("a", { href: url, target: "_blank", rel: "noopener", text: "Instagram" }))));
+    const sc = document.createElement("script"); sc.src = "https://www.instagram.com/embed.js"; sc.async = true; document.body.append(sc);
+  }
 
   // Wedding block on the Shows & events page: rotating photos + clip
   const ws = $("#wedding-slides");
