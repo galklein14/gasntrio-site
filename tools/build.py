@@ -5,10 +5,13 @@ Run after changing page structure or interface labels:  python3 tools/build.py
 Day-to-day content (texts, shows, videos, members) lives in content/*.json and
 is edited through Pages CMS, with no build step.
 """
+import hashlib
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://gasntrio.com"
+# Version tags so browsers fetch the new CSS/JS after every change
+VER = {f: hashlib.md5((ROOT / f).read_bytes()).hexdigest()[:8] for f in ("style.css", "app.js")}
 
 # Same addresses as the original Wix site, so old links keep working.
 # English is the default language (site root); Hebrew lives under /he/.
@@ -86,7 +89,7 @@ TITLES = {
     "concerts": ("Concerts | Original Klezmer-Balkan band | Di Gasn Trio", "הופעות | להקת כליזמר-בלקן | די גאסן טריו"),
     "music": ("Music | Original Klezmer-Balkan band | Di Gasn Trio", "מוזיקה | להקת כליזמר-בלקן | די גאסן טריו"),
     "wedding": ("Klezmer band for your wedding | Di Gasn Trio", "להקת כליזמר לחתונה | די גאסן טריו"),
-    "events": ("Klezmer band for weddings and events | Di Gasn Trio", "להקת כליזמר לחתונות ואירועים | די גאסן טריו"),
+    "events": ("Shows & events | Di Gasn Trio", "מופעים ואירועים | די גאסן טריו"),
     "epk": ("Press kit | Di Gasn Trio", "ערכת עיתונות | די גאסן טריו"),
     "privacy": ("Privacy policy | Di Gasn Trio", "מדיניות פרטיות | די גאסן טריו"),
 }
@@ -97,8 +100,8 @@ DESCS = {
     "wedding": ("A live klezmer and Balkan band for your wedding: reception, chuppah, procession and dancing.", "להקת כליזמר ובלקן חיה לחתונה שלכם: קבלת פנים, חופה, תהלוכה וריקודים."),
     "home": ("Di Gasn Trio: klezmer and Balkan music from Jerusalem. Concerts, festivals, weddings and events in Israel and abroad.",
              "די גאסן טריו: מוזיקת כליזמר ובלקן מירושלים. הופעות, פסטיבלים, חתונות ואירועים בארץ ובחו״ל."),
-    "events": ("A live klezmer and Balkan band for your wedding: reception, chuppah, procession and dancing.",
-               "להקת כליזמר ובלקן חיה לחתונה שלכם: קבלת פנים, חופה, תהלוכה וריקודים."),
+    "events": ("Themed concerts, masterclasses, private concerts, life-cycle events and lectures with Di Gasn Trio.",
+               "מופעי תוכן, כיתות אמן, הופעות לקבוצות, טקסי חיים ואירועים פרטיים והרצאות עם די גאסן טריו."),
     "epk": ("Biography, press photos, technical rider and videos of Di Gasn Trio.",
             "ביוגרפיה, תמונות לעיתונות, מפרט טכני וסרטונים של די גאסן טריו."),
     "privacy": ("How gasntrio.com handles your information.", "איך האתר gasntrio.com מטפל במידע שלכם."),
@@ -146,7 +149,7 @@ def build(page, lang):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style.css?v={VER['style.css']}">
 </head>
 <body data-page="{page}">
 <a class="skip" href="#main">{t('skip')}</a>
@@ -202,7 +205,7 @@ def build(page, lang):
     <p class="fine">© <span id="year"></span> Di Gasn Trio · {t('rights')}<a href="{link("privacy")}">{t('privacy')}</a></p>
   </div>
 </footer>
-<script src="/app.js" defer></script>
+<script src="/app.js?v={VER['app.js']}" defer></script>
 </body>
 </html>
 """
